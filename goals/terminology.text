@@ -9,6 +9,17 @@ And even then avoid capital letters unless really necessary.
 
 Everyone will know what you mean if you type http.
 
+	select
+		not
+			SELECT
+	constant
+		not
+			CONST
+			CONSTANT
+
+Don't capitalise verbs - I'm looking at you C#.
+
+
 
 
 Don't shorten or contract words unless really necessary
@@ -44,15 +55,25 @@ For keywords this will be mandatory, for your own variables, a guideline.
 	object
 		not
 			obj
+	constant
+		not
+			const
 
 
 
+Avoid verbs
+-----------
+
+	This is more to do with:
+		data-orientation
+		declarative rather than imperative programming
+		immutability
+	So probably deserves a separate article.
 
 
 
-
-Avoid jargon where a clearer word exists
-----------------------------------------
+Avoid CS jargon where a more straightforward word exists
+--------------------------------------------------------
 
 Try to use to most obvious english meaning of words rather than cs jargon.
 
@@ -60,13 +81,31 @@ Try to use to most obvious english meaning of words rather than cs jargon.
 	source		-> code, program text, program data
 	(python)
 		def 	-> function
+	map
+		not sure yet
+		when used prefer map as a noun not a verb though
 
+Prefer well established meanings in:
+	ordinary use
+	maths
+	science
 
 
 Avoid Plurals
 -------------
 
-Use singular even when addressing a group.
+Use singular form even when addressing a group.
+
+	so cat[1]
+	not cats[1]
+
+	product[xyz]
+	not products[xyz]
+
+	child[0]
+	not children[0]
+
+
 
 Plurals have funky rules in english so best to avoid.
 Also the most common form of plural, the addition of an 's', is easily confused with a verb,
@@ -81,8 +120,23 @@ Also the most common form of plural, the addition of an 's', is easily confused 
 Avoid ambiguity
 ---------------
 
+Along with the above, avoid using words that have multiple meanings, where your chosen meaning isn't obvious.
+The node.js 'imports' keyword in an obvious example.
 
 
+
+Avoid terminology trying to be trendy, cool, funky, cute, hip, obscure
+----------------------------------------------------------------------
+Use ordinary conventional syntax and grammar for your language.
+No
+	txt spk
+	l33tsp34k
+	emojis ;-)
+	anything that requires looking it up on Urban Dictionary
+	memes
+
+We're normal grown up humans here.
+If you're doing something truly iconic like sending a rocket to Jupiter then maybe, otherwise normal words are sufficient.
 
 
 
