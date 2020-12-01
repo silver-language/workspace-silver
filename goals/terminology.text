@@ -1,0 +1,96 @@
+Terminology
+===========
+
+
+Don't capitalise anything that doesn't need capitalisation
+----------------------------------------------------------
+
+And even then avoid capital letters unless really necessary.
+
+Everyone will know what you mean if you type http.
+
+
+
+Don't shorten or contract words unless really necessary
+-------------------------------------------------------
+
+For keywords this will be mandatory, for your own variables, a guideline.
+
+	function
+		not
+			f
+			fn
+			fu
+			fun
+			func
+			funct
+			...
+	integer
+		not
+			int
+	character
+		not
+			char
+	string
+		not
+			str
+			(but preferably text)
+	source
+		not
+			src
+	variable
+		not
+			var
+	object
+		not
+			obj
+
+
+
+
+
+
+
+Avoid jargon where a clearer word exists
+----------------------------------------
+
+Try to use to most obvious english meaning of words rather than cs jargon.
+
+	string		-> text
+	source		-> code, program text, program data
+	(python)
+		def 	-> function
+
+
+
+Avoid Plurals
+-------------
+
+Use singular even when addressing a group.
+
+Plurals have funky rules in english so best to avoid.
+Also the most common form of plural, the addition of an 's', is easily confused with a verb,
+	eg
+		imports
+			(n) things that are imported
+			(v) the act of importing
+
+
+
+
+Avoid ambiguity
+---------------
+
+
+
+
+
+
+
+References
+==========
+
+https://tech.slashdot.org/story/20/06/10/1922255/tech-terms-face-scrutiny-amid-anti-racism-efforts
+https://tech.slashdot.org/comments.pl?sid=16549610&cid=60168670
+
+https://developers.slashdot.org/story/20/06/14/1722223/github-android-python-go-more-software-adopts-race-neutral-terminology

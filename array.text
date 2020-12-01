@@ -1,0 +1,37 @@
+ 
+
+ 
+ An array is the most basic structure, it looks like this:
+ 
+ 
+	myArray:
+		foo
+		bar
+		4356
+		'blah blah blah'
+		etc
+		
+		
+Where any of the items mya be literal or references as context dictates.
+None of the items have explcit keys, but are given explicit keys, so you rewrite the above with the same meaning as:
+
+	myArray:
+		: foo
+		: bar
+		: 4356
+		: 'blah blah blah'
+		: etc
+
+		
+So how are the indexes/keys generated?
+
+There will be a default generator function that will simply add one the previous value, and you can seed the generator by doing this:
+
+	myArray:
+		1: foo
+		bar
+		4356
+		'blah blah blah'
+		etc
+
+ 

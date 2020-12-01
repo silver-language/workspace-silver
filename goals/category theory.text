@@ -1,0 +1,74 @@
+Category Theory
+===============
+
+	https://www.youtube.com/playlist?list=PLbgaMIhjbmEnaH_LTkxLI7FMa2HsnawM_
+
+	https://stackoverflow.com/questions/3870088/a-monad-is-just-a-monoid-in-the-category-of-endofunctors-whats-the-problem
+
+
+
+Set functions:
+--------------
+
+	injective:
+		every input has a unique output
+		no collapse in codomain;
+		there may be unmapped members in codomain
+		codomain >= image (can be)
+		cf monomorphism
+
+	surjective:
+		every output is mapped to an input
+		image covers complete codomain;
+		image = codomain (manadatory)
+		cf epimorphism
+
+	bijective
+		both injective and surjective
+		reversable
+		1:1 complete unique mapping
+		cf isomorphism
+
+	https://en.wikipedia.org/wiki/Bijection,_injection_and_surjection
+
+
+
+
+Morphisms:
+----------
+	https://en.wikipedia.org/wiki/Morphism
+	https://en.wikipedia.org/wiki/Category_theory#Morphisms
+	https://en.wikipedia.org/wiki/Bijection,_injection_and_surjection#Category_theory
+
+
+	monomorphism	(monic)
+		(cf injective)
+		every domain object is mapped to another unique object
+
+
+	epimorphism		(epic)
+		(cf surjective)
+		the morphism maps all objects in the target
+
+
+	isomorphism
+		both a monomorphism and an epimorphism
+
+
+Functor
+-------
+	https://www.youtube.com/watch?v=OSuu8zBBNAA
+		functors are containers for types
+		functor ~= map		(has map, implements map)
+		monad ~= functor + flatten
+		monad ~= flatmap	(has flatmap)
+
+	https://www.youtube.com/watch?v=7xmYgxmhx8M
+		monad =
+			functor +
+			return +
+			>>=
+
+		>>= equals flatmap
+
+
