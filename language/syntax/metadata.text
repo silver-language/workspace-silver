@@ -1,0 +1,47 @@
+Metadata
+--------
+
+This is one of the core tricky things.
+
+I want to be able to declare metadata in some cases, and not sure the best way to do it.
+
+There's also the philosophical dilemma of what's metadata, and what's simply 'data'.
+
+
+Some examples
+-------------
+
+A simple function 'foo':
+
+	foo
+		type: function
+		parameter:
+			i:
+				type: integer
+				description: this is i
+			j:
+				type: boolean
+
+		result: i + j
+	end foo
+
+And it's call:
+
+	myvar: foo ( i:4; j:true; )
+
+Which is simple enough.
+But what if we want to call it
+
+
+
+What is data and what is metadata?
+In that first example you
+
+
+
+
+
+
+
+
+

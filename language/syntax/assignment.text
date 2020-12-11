@@ -1,11 +1,11 @@
 Assignment
 ==========
 
-The general idea is to be declarative as far as possible rather than imperative. 
+The general idea is to be declarative as far as possible rather than imperative.
 So for example, in many languages:
 
 	x = 2
-	
+
 Means assign the value 2 to the variable x.
 It's kind of an operation, an action, a verb.
 
@@ -15,7 +15,7 @@ I'd like to retain the mathematical idea, and come up with somethind different f
 The best option I can come up so far is a colon, a-la
 
 	name : value
-	
+
 This falls in line with other more declarative or data style formats such as json.
 It say name IS value, though to be fair, once you know what it is doing it could be read either way.
 But I'd prefer to steer away, as much as is reasonable, from thinking imperatively.
@@ -27,12 +27,12 @@ This is the form I like:
 
 	name
 		foo : value
-		bar : value2 
+		bar : value2
 
 In that case the colon after 'name' is optional, but redundant.
 I think, though I'm not sure yet, that I'd like whitespace around the colon.
 	(Just in case I decide that contiguous non-whitespace can amount to a single identifier)
-	
+
 Note (and this needs to be clarified) that not just anything can be the name.
 If it is a reserved word, then other parsing rules apply.
 If the token isn't found, then it's a structure.

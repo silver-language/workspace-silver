@@ -6,8 +6,8 @@ a code block
 	sdf
 	sadf
 	sdaf
-	
-	
+
+
 named code block
 ----------------
 
@@ -17,8 +17,8 @@ named code block
 		sdf
 		sadf
 		sdaf
-		
-		
+
+
 
 named code block with metadata
 ------------------------------
@@ -45,7 +45,7 @@ separate metadata blocks
 			asdfsadf
 			sdfasdf
 			asfdsdaf
-			
+
 		code:				// 'code' is literal
 			sadf
 			sdf
@@ -53,16 +53,16 @@ separate metadata blocks
 			sdaf
 
 
-			
+
 class
 -------------------------
 
 FooClass
 	type: class
-	extend: 
-	implement: 
-	
-	
+	extend:
+	implement:
+
+
 Function
 -------------------------
 doFoo
@@ -72,9 +72,9 @@ doFoo
 		blah	string
 		foo		number
 
-		
 
-		
+
+
 Function Parameters
 -------------------
 parameter
@@ -88,7 +88,7 @@ parameter
 structure
 	parameter
 
-	
+
 
 
 Structure
@@ -104,8 +104,8 @@ structureName
 	value2			// no or implied/generated key
 	simpleKey:	value
 	simpleKey2: value
-	
-	
+
+
 structureWithMetadata/properties
 	metadata/properties
 		type
@@ -119,7 +119,7 @@ structureWithMetadata/properties
 
 
 structureWithInlineMetadata
-	value: 
+	value:
 
 Another option might be:
 
@@ -130,8 +130,8 @@ Another option might be:
 		)
 		data
 		...
-		
-	
+
+
 	But that messes up the indenting a bit
 
 
@@ -144,15 +144,15 @@ Use an anonymous or placeholder key, eg, with a few variants:
 	* thing
 		metadata
 		data
-	* 
+	*
 		thing
-			metadata 
+			metadata
 			data
 
 But none of those are really /good/.
 Regular code itself is an anonymous sequence, and code should look like
-	
-	
+
+
 	code
 		asdfasdf
 		asdfasdf
@@ -194,7 +194,7 @@ And if you include metadata, it gets a ~bit~ weird:
 				stuff
 				stuff
 				stuff
-			
+
 A concise metadata/typing syntax would help here.
 
 But....	then how do you have an array of *structured* items?
@@ -224,7 +224,7 @@ But....	then how do you have an array of *structured* items?
 		item 3 stuff
 		item 3 stuff
 		item 3 stuff
-		
+
 I like the idea of horizontal structure, but strict vertical structure, not so much.
 The delimiter effectively becomes two consecutive line ends.
 This looks okay, though has negative implications unless the array can be made explicit...
@@ -233,11 +233,11 @@ Eg
 		verb
 		verb
 		verb
-		
-		verb 
+
 		verb
 		verb
-		
+		verb
+
 Is that an array of six elements with some formatting, or two structured elements?
 If you typed it, something like:
 
@@ -245,8 +245,8 @@ If you typed it, something like:
 		verb
 		verb
 		verb
-		
-		verb 
+
+		verb
 		verb
 		verb
 
@@ -261,14 +261,14 @@ Structure/array take 2
 	qwer
 	asdf
 	zxcv
-	
+
 That's an array
 
 	asdf
 		asdf
 		asdf
 		asdf
-		
+
 That's a named subarray?
 
 	asdf
@@ -283,10 +283,9 @@ That's a named subarray?
 		asdf zxcv
 		asdf zxcv
 		asdf zxcv
-		
+
 Maybe...  that could be array of arrays, though the keys mean nothing
 
-	
 
 
 
@@ -297,5 +296,6 @@ Maybe...  that could be array of arrays, though the keys mean nothing
 
 
 
-	
-	
+
+
+

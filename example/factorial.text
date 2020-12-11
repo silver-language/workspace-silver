@@ -12,7 +12,7 @@ First go:
 		metadata
 			type: function
 			parameter
-				x 
+				x
 					type: integer
 			result
 				type: integer
@@ -32,11 +32,11 @@ What else can we do....
 	factorial
 		type: function
 		parameter
-			x 
+			x
 				type: integer
 		result
 			type: integer
-		
+
 		value x
 			1
 				result: 1
@@ -50,11 +50,11 @@ What if we, just for now, make the key colon mandatory:
 	factorial:
 		type: function
 		parameter:
-			x: 
+			x:
 				type: integer
 		result:
 			type: integer
-		
+
 		value x:
 			1:
 				result: 1
@@ -70,7 +70,7 @@ What if result was actual body???
 	factorial:
 		type: function
 		parameter:
-			x: 
+			x:
 				type: integer
 		result:
 			type: integer

@@ -1,5 +1,8 @@
 
+Structure
+=========
 
+Everything should be parseable into basic key:value structures, something like these:
 
 key: value
 
@@ -40,6 +43,30 @@ key
 		values
 		values
 		values
+
+
+
+Explicit and implicit keys
+--------------------------
+
+Anywhere that you go
+
+	key: value
+
+	key:
+		value
+
+	key:
+		value
+		value
+		value
+
+You create an explicit key, ie one of your creation and knowledge
+There are also implicit keys created for every line of code and structure.
+
+
+
+
 
 
 
