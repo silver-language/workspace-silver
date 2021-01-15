@@ -56,7 +56,7 @@ The idea of anonymous blocks isn't bad, after all you'd need to be able to creat
 			id:		2345
 		}
 
-Note the extra indent level would have to be there.
+Note the extra indent level would have to be there if the parent collection didn't use braces.
 Doing the same construct without braces.... what could you do?
 
 
