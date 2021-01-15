@@ -1,0 +1,21 @@
+
+
+
+The basic 'assignment' operator is a colon.
+
+
+	foo: 1
+
+Equals will hopefully be reserved for other kinds of things.
+
+
+
+Does it, or could it, make any sense to stack colons?
+
+	foo: bar: 1
+
+Written like that the interpretation is pretty obvious, but is that something we would want?
+
+
+
+
