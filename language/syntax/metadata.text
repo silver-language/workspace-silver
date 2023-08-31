@@ -1,0 +1,43 @@
+
+Metadata
+========
+
+This follows on the from some of the thoughts in ../data/name type value.text
+I was just getting started in there, want to flesh out the thought experiment, see where it leads.
+
+
+In looking for ways to avoid reserving useful words like name, type, value I was toying with adding a metadata substructure to all values.
+The syntax i disliked least was either a special 'meta' key, or alternatively two dots, eg
+
+
+	name.meta.type
+	name..type
+
+Wherein the keys 'type' and 'name' would be stored
+
+	product: string 'cornflakes'
+	price: number 4.99
+
+Metadata could be accessed like this:
+
+	print product..type
+		string
+
+	print product..name
+		product
+
+	print price..type
+		number
+
+
+I wasn't sure about arrays - had a couple of different ideas about how it could work, need to throw this around.
+
+	product:	type
+		name:	string
+		price:	number
+
+	1234: product
+		name:	'cornflakes'
+		price:	4.99
+
+Which reminds me I really need a way to specify multiplicity...

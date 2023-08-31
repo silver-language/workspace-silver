@@ -35,3 +35,49 @@ Generator functions can be provided that, but the default will simply start at o
 		etc
 
 
+
+
+Arrays of structures
+--------------------
+
+How do i have anonymously/automatically named structures?
+Do i have to revert back to brace syntax for that?
+
+people:
+	1:
+		name: ...
+		address: ...
+		phone: ...
+
+	2:
+		...
+
+people
+	{
+		name: ...;
+		address: ...;
+		phone: ...;
+	}
+	{
+		...
+	}
+
+Ahh - see 'block structure' - i have disscussed this problem a bit.
+The solution I ended up at was to use semi-anonymous value markers something like this:
+
+people:
+	person
+		name: ...
+		address: ...
+		phone: ...
+
+	person
+		name: ...
+		address: ...
+		phone: ...
+
+
+In this case person without colon after it denotes a value, not a name.
+This deserves some more discussion, as it impacts on good and bad syntax and schema/typing.
+
+

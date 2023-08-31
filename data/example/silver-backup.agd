@@ -1,0 +1,41 @@
+
+
+description:
+	This is an example config file for silver-backup
+
+
+logfile:	~/silver.backup.log
+
+
+node:
+	disk1:
+		path: /mnt/disk1
+
+	disk2:
+		path: /mnt/disk2
+
+	disk3:
+		path: /mnt/disk3
+
+
+
+operation:
+	backup-1-2:
+		source: disk1
+		destination: disk2
+		method: send-receive
+		schedule:
+			day: 1
+		retain: 2
+
+	backup-2-3:
+		source: disk2
+		destination: disk3
+		method: send-receive
+		schedule:
+			month: 1
+		retain: 2
+
+
+
+

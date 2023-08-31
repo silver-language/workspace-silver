@@ -203,5 +203,85 @@ In data i'll stick with idea that single and collections are distinct for now.
 
 
 
+Syntax for multiplicity/generics
+--------------------------------
+
+This is going to be very preliminary, just explore some options.
+The most obvious place to store this is in the metadata.
+
+syntax for multiplicity
+
+	player: type
+		name: string
+		position: number
+
+	team: [1...12] of player
+
+	team.player.1:
+		name: 'Ken'
+		position: 7
+
+	team..type = [1...12] of player
+	team..type = array[1...12] of player
+	team[1]..type = player
+	team.1..type = player
+	team..index.type = integer
+	team..index.first = 1
+	team..index.last = 12
+	team..index.before = 0		// or maybe undefined, depending on circumstances
+	team..index.after = 13		// or maybe undefined, depending on circumstances
+	team.1 =
+		name: 'Ken'
+		position: 7
+
+
+
+That all looks not too bad as far as it goes. Array is a fundamental type in silver. But What about other types of collections?
+What if I want a graph of bus stops?
+
+	busStop: type
+		location: coordinates
+		ident: alphanumeric
+
+
+	busStopNode:
+		busStop: busStop
+		adjacent: []busStop
+
+	graph:
+
+	busStopGraph: array of busStopNode
+
+Hmmm in this case a graph is also just an array - is there a collection that can't be simply expressed as an array?
+	stack
+	queue
+	list
+	map
+	vector
+If we're oo-style then the presence of methods would prevent things from being simple arrays, but otherwise, nearly everything i can think of is an array of some sort or another... hmmm.
+I'll shelve this thought for the moment.
+
+Just a few other ideas i had about array syntax
+
+	winners: [gold,silver,bronze] of competitor			// an array with just those three keys
+
+	non-winners: [4...] of competitor					// positions 4 onwards
+
+	competitors: [0...]									// traditional zero-based array
+	competitors: [1...]									// 1 based array
+
+	excelRow:	[aa...]	of cell							// auto incrementing alpha starting at aa
+	postion: [integer]
+	struct: [alphanumeric] of any								// kind of equivalent to a standard associative array
+
+
+
+
+
+
+
+
+
+
 
 

@@ -10,7 +10,7 @@ Means assign the value 2 to the variable x.
 It's kind of an operation, an action, a verb.
 
 In mathematics, however it's a statement of fact or truth, so it's a boolean expression.
-I'd like to retain the mathematical idea, and come up with somethind different for assignment.
+I'd like to retain the mathematical idea, and come up with something different for assignment.
 
 The best option I can come up so far is a colon, a-la
 
@@ -36,6 +36,45 @@ I think, though I'm not sure yet, that I'd like whitespace around the colon.
 Note (and this needs to be clarified) that not just anything can be the name.
 If it is a reserved word, then other parsing rules apply.
 If the token isn't found, then it's a structure.
+
+
+Update
+------
+In the example given above the colon is now required:
+
+	name:
+		foo : value
+		bar : value2
+
+A line without a colon is a value (a type and/or an expresssion), so in the earlier example 'name' could be a type, but would be meaningless as say a literal.
+
+
+
+Outcomes
+========
+
+Assignment of a single value
+
+	foo : bar
+
+Assignment of a compound value
+
+	fooCollection:
+		foo1: bar1
+		foo2: bar2
+		foo3: bar3
+
+
+Equality comparison - this is a boolean or truth statement
+
+	foo = bar
+
+
+
+
+
+
+
 
 
 
