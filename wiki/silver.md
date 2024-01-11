@@ -1,6 +1,9 @@
+Silver
+======
+
 
 Silver Data
-===========
+-----------
 
 This is where we start, silver is at it heart a data format.
 
@@ -17,14 +20,14 @@ or
 		b
 		c
 
-As such it's structure is one of keys and values.
+As such its structure is one of keys and values.
 
 All silver files are data files, and can be parsed into structure trees.
 
 
 
 Silver Language
-===============
+---------------
 
 Silver language is an additional layer on top of the data format.
 
