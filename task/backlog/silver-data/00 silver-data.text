@@ -1,0 +1,60 @@
+Silver Data
+===========
+Micro tasks that might need to be broken out to their documents.
+
+
+
+
+
+Define a (semi) formal grammar for Silver Data
+	in indented mode
+	in delimited mode
+
+Determine if i need separate lexing and parsing, and where they apply
+
+
+Figure out how to get constants for things like separators & delimiters out of the code
+	Hopefully still be added in at compile time
+	I haven't found any built-in setups yet, but there are a few crates around, eg
+		https://docs.rs/config/0.10.1/config/
+	Don't think they'll do compile-time config though - keep looking
+
+
+Set up some tests so i can see what's coming in and test it against what's coming out.
+	Useful for picking up regressions/bugs
+	For starters could try to use Rust's pretty printer for testing output.
+
+
+Define processing stages - here's a go:
+	read source
+	split it into symbols (lexing)
+		have two (or more) lexing paths for indented and delimited
+	map symbols to data structures
+		all lexing paths should produce the same data structures
+
+	the canonical data structure is the end result
+
+
+
+Figure out lifetimes properly
+	I had to add some lifetime annotations on some of the structs in the model, but really just stumbled through
+	it to the point it would compile.
+	Need to figure out what's happening a bit more clearly.
+
+	Really good video on lifetimes:
+		https://www.youtube.com/watch?v=1QoT9fmPYr8
+
+
+
+Look into rust-clippy:
+	https://github.com/Manishearth/rust-clippy
+	This might help me get more idiomatic more quickly
+
+
+
+Memory usage:
+	Was trying to find a simple way to determine how much memory a programe uses
+	Try these two links:
+	https://users.rust-lang.org/t/how-to-calculate-memory-usage/51240/2
+	https://stackoverflow.com/questions/774556/peak-memory-usage-of-a-linux-unix-process
+

@@ -1,0 +1,9 @@
+Read directory with filters
+===========================
+
+Have spent a fair bit of time on this - reading directories in rust can be quite difficult.
+
+Have a basic version of it going, but it's pretty crufty/non-idiomatic.
+
+Will likely need a lot of rewriting once I figure out how it's supposed to be done.
+

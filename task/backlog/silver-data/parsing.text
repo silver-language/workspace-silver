@@ -1,0 +1,43 @@
+
+
+Parse
+=====
+Turn a string into a data structure
+
+
+
+Parts
+-----
+
+ 	Allow for line end postfixes (...?)
+
+	Create data structure types for blocks and key-val pairs
+
+	go through split up lines and organise into blocks
+
+
+	be able to recognize structure errors
+
+	create an auto-generation function for anonymous values
+
+	be able to recognise block end statements
+
+	be able to recognise brace blocks
+
+	be able to configure
+		block indents
+		block open close
+		key-val separators
+		statement ends
+
+		I prefer to configure this ~with~ silver-data, so leave these as constants for now
+		unless you can dynamically load a module or something???
+
+
+
+Done
+----
+
+	read a string line by line
+
+	split each line into indent prefixes and data

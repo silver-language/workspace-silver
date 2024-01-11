@@ -1,0 +1,30 @@
+Change silver data extension
+============================
+
+Not sure exactly where this came from, think i was thinking about project names (rust butter backup etc).
+The 'silver' extension i've been using so far is fine, and maybe preferable in some ways.
+I've thought about using short things like 'ag' before, but never committed because practically everything is already out there:
+	https://www.file-extension.org/alphabetical/a
+Although lots of those are pretty ancient; arcgis a notable exception.
+(.silver isn't as far as i can tell)
+
+
+So i've thought about it again and it occurs to me that it might be useful to have different extensions for slightly different uses, say for example:
+
+	.agd		- silver data
+	.agl		- silver language
+	.ag*		- silver other things...
+
+Which is a pretty okay scheme I think, not too short, allows for different ideas.
+Some of those already exist of course, so i'd be treading on other things in the hope that the ag itself was enough to make it clear.
+Another option is to do something like this:
+
+	.ag-d		- silver data
+	.ag-l		- silver language
+	.ag-*		- silver other things...
+
+Which would likely be unique, but i think it's a bit ugly.
+Not sure if hyphens would be a problem on some filesystems or OS too.
+
+I think I'll go with the former for now, and see how it goes.
+

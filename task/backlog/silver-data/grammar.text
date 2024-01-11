@@ -1,0 +1,106 @@
+
+I've been reading more about lexing and parsing, and it might be worth it to define the grammar for silver more formally.
+
+I kind of know what i want, but writing it down more clearly will me write the code more clearly.
+
+
+
+
+
+
+literal=
+	| string
+	| integer
+	| float
+	| boolean
+
+
+
+terminator =
+	newline
+
+assignmentSeparator =
+	:
+
+
+assignment
+	(identifier assignmentSeparator)? value terminator
+
+
+value =
+	| literal
+	| block
+
+
+block
+	(
+		assignment
+	)*
+	(
+		blockTerminator
+	)?
+
+
+So I might still be mixing up a couple of ideas here, but that's the general idea.
+To be more specific i'd need to add in two block definitions - one for indented one for delimited.
+Also need to add two new values to specify what can go in what:
+
+
+block =
+	|	block-indent
+	|	block-delimit
+
+
+When we're in delimited mode:
+
+	block-delimited =
+		block-open
+		(assignment)*
+		block-close
+
+	value =
+		| literal
+		| block-delimited				// NB delimited blocks can ONLY contain other delimited blocks
+
+	terminator =
+		;
+
+When we're in indent-mode:
+
+
+	indent-string =
+		tab
+
+
+	block-indent =
+		(
+			indent-string assignment
+		)*
+		(
+			block-close
+		)?
+
+	terminator =
+		newline
+
+	value-indent =
+		|	literal
+		|	block						// NB indented blocks can have EITHER indented or delimited blocks
+
+
+
+
+
+So that's sorta-kinda the grammar.
+I might have made an error in enforcing that a terminator be part of an assignment, not sure yet.
+It might be part of lexing, not parsing, but not sure yet.
+
+
+
+
+
+
+
+
+
+

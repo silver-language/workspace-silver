@@ -1,0 +1,24 @@
+
+
+
+
+Split up into libs, packages, crates, modules etc
+
+https://doc.rust-lang.org/stable/book/ch07-00-managing-growing-projects-with-packages-crates-and-modules.html
+
+
+Sections i want separated:
+
+	file reading/writing
+		this should probably be fairly run-of-the-mill actually
+
+	rendering systems
+		turning data structures of various kinds into strings
+
+	parsing
+		creating data structures from strings
+
+
+
+
+

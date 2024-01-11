@@ -1,0 +1,6 @@
+Render:
+	Turn a data structure into a string.
+
+	Core format is silver, but also various readable representations such as html, xml, json etc.
+
+	Core parsing and rendering should be perfectly reversible

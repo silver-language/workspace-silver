@@ -1,0 +1,14 @@
+silver data
+===========
+
+
+Split up main into different tasks
+	time to start building up a command suite, eg for
+		various testing tasks
+		parsing
+	Ultimately though silver-data is probably better as a library.
+
+
+
+
+Change terminology in a lot of places from 'file' to 'source' - the file analogy will break down fast in other contexts.

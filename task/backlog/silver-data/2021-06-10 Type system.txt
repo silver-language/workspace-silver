@@ -1,0 +1,17 @@
+
+Type System
+===========
+
+
+Well I could spend a lot of  time here, and already have.
+
+Going to try to distill down some of what I've learned, and see if there's any path forward I can take while trying to absorb as much as I can.
+
+
+
+https://alexknvl.com/posts/counting-type-inhabitants.html
+	The whole article is interesting (the parts I get), but the bit that stood out to me initially was the question in the  section headed "Distributing * over +":
+	"Why are structs and enums in C/C++ are inadequate for representing types?"
+	I've reread that section about 7 times, and still don't get it fully.
+	But it's interesting to me as I've wondered if ordinary data structures *could* represent types; it's sort of something I'd been thinking about for silver.
+	Certainly many languages let you do things like that, so right now I'm a little unclear what the distinction is.

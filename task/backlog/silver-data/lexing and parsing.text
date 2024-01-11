@@ -1,0 +1,6 @@
+
+Lexing and parsing
+==================
+
+After reading a bit more about lexing and parsing I'm wondering if it would be useful to start separating my code into those phases.
+

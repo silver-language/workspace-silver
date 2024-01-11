@@ -1,0 +1,53 @@
+Basic testing
+-------------
+
+For this the goals are:
+
+	read one or more input files from a directory
+	generate output from the input files
+	be able to write the output back to the source directory with amended extension
+	be able to compare input files from a directory with existing output files
+
+These will allow for basic regression testing while fiddling with the parsing algorithms
+
+
+
+Where to put some of this stuff?
+--------------------------------
+
+Ultimately the whole project will have to cleaned up considerably.
+Running the tests themselves should be able to be safely done from cargo, but generating the output i'm not sure about yet.
+
+It's been a while since i've looked at that stuff, so I'll go back and see if there are some ways to perform specific test targets, and avoid some.
+(answer to last: yes)
+
+Having some problems getting integration tests to read my main module structure - I think it's because I'm still using a binary (main.rs) for everything.
+	https://stackoverflow.com/questions/38995892/how-to-move-tests-into-a-separate-file-for-binaries-in-rusts-cargo
+
+In the long run silver-data should almost certainly be a library, so i might try converting it over.
+Useful idea in the second most rated answer here:
+	https://stackoverflow.com/questions/26946646/rust-package-with-both-a-library-and-a-binary
+
+
+
+
+Convert to library
+------------------
+That's was done last week, moved main out to bin dir, seems to be working, I can call my main code from the integration test code now.
+
+
+Changes to file interfaces
+--------------------------
+Initially most of the apths in the file methods i created used plain strings; I've been trying to convert things back to more domain-correct types such as PathBuf and OsString.
+Also have been experimenting with the AsRef<Path> pattern that I was reading about here:
+	https://www.philipdaniels.com/blog/2019/rust-api-design/
+
+The idea as I understand it is to allow the methods to accept a wider set of compatible types, a handy thing.
+
+It's still pretty messy in there, but I'll continue cleaning and working on it.
+
+
+First test output
+-----------------
+The changes in the file methods were partly to make it easier to plug in output from the get_files_... method back into the read and parse code.
+Now that that's done I've managed to generate test output for the very first time.

@@ -1,0 +1,25 @@
+Convert to Library
+==================
+
+Fairly sure my integration tests weren't working as expected becuase i was still using a binary (main.rs) crate setup.
+Have decide to convert to library, which silver-data should be anyway.
+https://stackoverflow.com/questions/26946646/rust-package-with-both-a-library-and-a-binary
+
+More info on cargo's dir structure (lib/binary) here:
+	https://learning-rust.github.io/docs/a4.cargo,crates_and_basic_project_structure.html
+
+
+Convert to library
+------------------
+Okay have a basic conversion going in a branch.
+
+Moved most of main.rs into the bin directory, left the mod structure in lib.rs
+
+Thoughts:
+	not keen on making all of the modules public everywhere - need to figure that out better
+	not sure i should be using PathBuf in most places, probably should be regular Path instead
+	not really sure what should go into the lib.rs file now...
+
+
+
+

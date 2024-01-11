@@ -1,0 +1,6 @@
+Test file location
+==================
+
+After splitting the repo the test files were orphaned - need to put those back in place.
+I presume this will just end up in a folder under 'tests', but want to have a look around at some other rust projects to see how others are doing it just to confirm.
+

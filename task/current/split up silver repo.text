@@ -1,0 +1,147 @@
+
+
+Split up silver repo
+====================
+
+Time to do this.
+
+New destination repos:
+	silver-data
+	silver-language
+	task
+
+Pity i have to do this, but it looks inevitable at this point.
+There is currently nothing at all in the silver-langauge project so that's easy.
+
+
+Requirements
+------------
+
+	move example/test data for silver-data into its project folder
+	clean up (delete/move) any other extraneous folders in the main repo
+
+	split up the main repo into silver-data and task
+
+
+
+
+https://coderwall.com/p/0c-ayq/howto-split-a-git-repository-into-two
+https://www.endpoint.com/blog/2017/08/14/how-to-split-git-repositories-into-two
+https://github.com/newren/git-filter-repo/
+
+
+
+Tools
+-----
+Will try for git-filter-repo as it seems to be the newer and recommended choice.
+Filter-branch would probably work for my case though as my repo is tiny.
+
+For some reason git-filter-repo is not in the ubuntu repos, so have installed it via pip.
+It's now in
+	/home/paul/.local/lib/python3.8/site-packages/git_filter_repo.py
+
+Following
+	https://superuser.com/questions/1563034/how-do-you-install-git-filter-repo/1563783#1563783
+
+
+
+
+
+Clean up
+--------
+The main folders of interest in the current silver repo:
+
+	silver/project/silver-data/
+	silver/task/
+
+All the other folders/files need to be dealt with:
+	.kdev4/						- discard
+	.vscode/					- discard
+	example/					- move this out and reintroduce to test suites as needed
+	information/				- discard
+	output/						- this was an old test data output folder - can probably be discarded
+	project/silver-data/		- ***dedicated repo***
+	project/silver-language/	- nothing in it, can be discarded; to be recreated later
+	project/test/				- will probably need to be merged, in some form, into silver-language
+									will need to do a bit of brushing up on best practise for this
+	task/						- ***dedicated repo***
+	.gitignore					- recreate for silver-data
+	silver shared.text			- discard
+	silver.code-workspace		- recreate/merge into new projects; add to git ignore; prefer user-prefs
+	silver.kdev4				- discard
+
+
+Process
+-------
+Will copy the repo instead of cloning it as I don't want a relationship to the original.
+
+As this file is itself in the repo I'll close it off shortly with a final commit, then proceed.
+
+Looking at:
+	https://htmlpreview.github.io/?https://github.com/newren/git-filter-repo/blob/docs/html/git-filter-repo.html#EXAMPLES
+
+I think i want something like
+
+	git filter-repo --path-rename project/silver-data/:/ --path /
+
+But I'm not sure that will work correctly - maybe i want to do it in two steps
+
+	git filter-repo --path project/silver-data
+	git filter-repo --path-rename project/silver-data/:/
+
+I'll see if i can safely do this experimentally in a test copy.
+Using this location:
+	/home/paul/temp/repo-cleanup/
+
+
+
+Split process journal
+---------------------
+
+This was the temporary journal while I left the original repo alone:
+
+	python ~/.local/lib/python3.8/site-packages/git_filter_repo.py
+
+	python3 ~/.local/lib/python3.8/site-packages/git_filter_repo.py --path project/silver-data --force
+
+
+Okay that one worked, still looking at the results.
+Nearly everything has been cleared out except for the kept path.
+Some empty folders have been left behind, and some untracked or ignored files are also left behind.
+In a history viewer all my commits related to the task folder have also been excised.
+And commits that spanned both folders now only reference the main folder.
+So this is pretty much what i want
+
+Actually there was one extra thing i needed to keep - the git ignore file.
+Will blow the test repo away and try again:
+
+	python3 ~/.local/lib/python3.8/site-packages/git_filter_repo.py --force --path .gitignore --path project/silver-data
+
+Okay that's pretty cool, worked and the resulting repo is clean.
+Will delete the extraneous files and folders next, then try to move the main folder down to the repo root.
+
+	python3 ~/.local/lib/python3.8/site-packages/git_filter_repo.py --force --path-rename project/silver-data /:/
+
+This one worked:
+	python3 ~/.local/lib/python3.8/site-packages/git_filter_repo.py --force --path-rename project/silver-data/:
+
+It's left behind a bunch of stuff, including a .git folder that was in project/silver-data - I'm not sure where this one came from, it might be an old leftover from an old git init.
+I think i can probably ignore it.
+The old target folder will also need to be manually removed, and the gitignore rewritten slightly.
+
+Similar operations can be performed on another copy of the source repo to extract the task folder.
+
+	python3 ~/.local/lib/python3.8/site-packages/git_filter_repo.py --subdirectory-filter task/
+
+
+
+Wrapup
+------
+
+Succesffuly (afaict) split up the original silver repo into 'silver-data' and 'task'.
+Have copied these back to the project folder and started creating vscode workspaces and cleaning up things like git ignores.
+Looks okay so far, will keep using the new versions.
+
+One of the reasons i was doing this was to allow for potentially cleaner pushes to github et al.
+So one of the next things i want to test are vscode-github integration tools to see if they have any special requirements.
+Some tools i've used in the past assumed certain wokplace/repo structures to work properly.

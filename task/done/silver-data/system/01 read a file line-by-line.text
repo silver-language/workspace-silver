@@ -1,0 +1,7 @@
+Do some simple stuff like
+	Start to read the file,
+	Go through its lines and count some things
+	Output some info about the file
+
+	Okay this may be a bit harder than it sounds - turns out strings in rust are a tricky topic.
+

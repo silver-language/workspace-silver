@@ -1,0 +1,85 @@
+
+Schema
+======
+
+Almost immediately after i get the initial version of silver-data going the next thing I'm going to need will be a way to specify schemas.
+
+The question that immediately springs to mind is:
+
+	What is the difference between a type and schema?
+
+[A Long Journey awaits...]
+
+
+
+
+
+
+Data format considerations
+--------------------------
+
+While i was looking at licenses i went donw a little side track at some of the differences, pros and cons between some of the common formats.
+Some of the discussion is relevent here, and reflects some of my own feelings.
+Also there are relevent points to be made about types and schemas.
+
+Some links:
+	https://hitchdev.com/strictyaml/why-not/toml/
+	https://github.com/madmurphy/libconfini/wiki/An-INI-critique-of-TOML
+
+Overall what I'm going is going to end up looking very similar to yaml, with a few changes
+	tabs rather than spaces
+	no specifically separate syntax for lists
+	I'd prefer to avoid specifc syntax for anchors and references, though optional explicit ones might be needed
+	I'd prefer to use schemas for typing
+
+And the last one is the relevent one here.
+
+
+Schemas for typing
+------------------
+
+The idea here is that wherever possible a schema is the preferred way to declare types, as opposed to any inline mechanism.
+
+My reasoning for this is only very formative at this stage, but i'll put down my initial ideas:
+
+	Different languages/contexts might have different relevent types/names for types
+	Encourage properly specified documents over arbitrary self-specified ones
+	Reduce size and noise in data documents
+
+So for instance if you didn't use inline typing you could perhaps have different schema documents for the same data format:
+
+	One general default one, where everything is a string.
+	More specific ones that specify particular datatypes in certain ways, with more or less specificity.
+	Ones that only specify compile-time typing
+	Ones that specify runtime validation checks
+	Schema/type documents that are relevent for different languages.
+
+
+Schemas and types
+-----------------
+Over in the main silver discussion/design repo I've sort-of/mostly concluded that types are things verified at compile time and that schemas are a superset of types that can include or imply run-time validation checks.
+
+So I'm going to start with defining the simplest useful type scheme for silver-data, and see what can be built up from it, and also waht might might need to be built beneath it.
+
+
+The simplest silver-data type scheme
+------------------------------------
+
+The way i see it, the smallest useful set of types for silver data is string plus array.
+(And just to reiterate, by array I mean associative array.)
+
+I don't yet have language for alternates or multiplicity, so in pseudo-silver:
+
+	array:
+		string or array
+
+And that's the simplest I can make it.
+(It should also be the default if nothing else is specified.)
+
+I don't really want to use BNF here because i'm not defining the concrete syntax yet, just the data structure.
+So i suppose what i'm really creating is a type expression.
+
+
+
+
+
