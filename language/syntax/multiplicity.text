@@ -64,6 +64,28 @@ Separate type and declaration
 
 
 
+Slow down for a sec - we need a standard syntax
+-----------------------------------------------
+I've accidentally gone ahead a defined a neat compact syntax for multiplicity/array keys without an ordinary array-style syntax
+
+myArray: array
+	1: 'hello'
+	2: 'world'
+
+
+What is the the metadata key for the member names of the array?
+
+	names?
+	valueNames?
+	keynames?
+	keys?
+
+
+
+
+
+
+
 
 
 
