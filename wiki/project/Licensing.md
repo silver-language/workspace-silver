@@ -1,6 +1,6 @@
 
-Choose license(s)
-=================
+Licensing
+=========
 
 For:
 	format, library
@@ -17,12 +17,12 @@ For:
 I've been reading and watching videos but no clear answers are emerging just yet.
 There are multiple angles to come at this so i need some approaches:
 
-	* See what licenses 'comparable' projects use
-		data formats
-		languages
-		user level tools
-	* Determine whether there is license heirachy, eg x can use y, but not vice-versa
-	* See what license most Rust libraries/programs use
+* See what licenses 'comparable' projects use:
+	data formats
+	languages
+	user level tools
+* Determine whether there is license heirachy, eg x can use y, but not vice-versa
+* See what license most Rust libraries/programs use
 
 
 
@@ -31,7 +31,7 @@ Licenses used for formats and languages
 A quick review from wikipedia. Years are of first appearance.
 
 
-Formats
+### Formats
 	https://en.wikipedia.org/wiki/Open_format
 
 	HTML			1993			open format
@@ -40,14 +40,16 @@ Formats
 	YAML			2001			open format
 	TOML			2013			open format
 
-	Take a look at the JSON spec for example:
-		https://www.ecma-international.org/publications-and-standards/standards/ecma-404/
-	ECMA own the copyright of the spec, but there's no license as such.
-	There's also ISO/IEC 21778:2017, which is nearly the same as the ECMA document, it has ISO/IEC copyright attributions though.
+Take a look at the JSON spec for example:
+	https://www.ecma-international.org/publications-and-standards/standards/ecma-404/
+
+ECMA own the copyright of the spec, but there's no license as such.
+There's also ISO/IEC 21778:2017, which is nearly the same as the ECMA document, it has ISO/IEC copyright attributions though.
 
 
-Languages
-	Licenses are for currently available implementations presumably
+### Languages
+
+Licenses are for currently available implementations presumably
 
 	Fortran			1957			???
 	COBOL			1959
@@ -79,32 +81,20 @@ Languages
 	Lucee			2015			LGPL v2.1
 
 
-	Note the difference between the language itself and the implementation (compilers, tooling etc).
-	For the earlier languages, and ones with public specifications, the languages specs themselves are presumably open in some way, ie owned by a standards body or public domain.
-	I guess anyone can write an implementation of the spec and license their implementation as they please.
-	For the more recent languages the license probably refers to the main implementation.
-	Eg python has a few implementations, some have different licenses.
+Note the difference between the language itself and the implementation (compilers, tooling etc).
+For the earlier languages, and ones with public specifications, the languages specs themselves are presumably open in some way, ie owned by a standards body or public domain.
+I guess anyone can write an implementation of the spec and license their implementation as they please.
+For the more recent languages the license probably refers to the main implementation.
+Eg python has a few implementations, some have different licenses.
 
 
 Summary
+-------
 
-	Formats that I'm interested in are all open.
-	Language specifications, where they exist, have copyright holders, but no licenses per se.
-	Software licenses apply to individual implementations.
-	Newer languages tend to use permissive open source licenses such as MIT, Apache or BSD for their implementations.
-
-
-
-
-
-
-
-
-
-
-
-
-
+* Formats that I'm interested in are all open.
+* Language specifications, where they exist, have copyright holders, but no licenses per se.
+* Software licenses apply to individual implementations.
+* Newer languages tend to use permissive open source licenses such as MIT, Apache or BSD for their implementations.
 
 
 
@@ -112,3 +102,5 @@ Links
 -----
 
 https://opensource.com/article/17/9/open-source-licensing
+
+https://developers.slashdot.org/story/20/10/16/147252/developer-says-aws-forked-his-project-and-launched-it-as-its-own-service
