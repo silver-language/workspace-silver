@@ -11,13 +11,12 @@ The presence of colons
 
 Are these 2 examples the same or different:
 
-
-1.
+'tag' has a colon:
 
 	product1:
 		id: 1234
 
-		tag:								...has a colon
+		tag:
 			new
 			great
 			fantastic
@@ -25,11 +24,12 @@ Are these 2 examples the same or different:
 		price: $9.99
 
 
-2.
+'tag' does NOT have a colon:
+
 	product1:
 		id: 1234
 
-		tag									...does NOT have a colon
+		tag
 			new
 			great
 			fantastic
@@ -37,9 +37,6 @@ Are these 2 examples the same or different:
 		price: $9.99
 
 
-
-
-The only difference being in the 'tag' blocks, one has a colon, one does not.
 
 Normally something without a colon denotes a value, as in the tags ('new' etc) themselves.
 But can a block be anonymous, and if so how would you denote it, and how would you interpret the first example?

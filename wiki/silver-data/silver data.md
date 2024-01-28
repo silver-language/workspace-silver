@@ -2,18 +2,19 @@
 Silver Data
 ===========
 
-Lots of the documents in this folder are where i'm figuring out the ideas.
-In this document I'll keep the current summary of the rules.
+This is the current summary of the syntax and rules.
 
 
-
-
+Assignment
+----------
 
 Named values must have a colon after the name and before the value:
 
-	year: 2000
+	year: 2001
 
 
+Blocks
+------
 
 Blocks are denoted by indentation:
 
@@ -24,15 +25,6 @@ Blocks are denoted by indentation:
 	person:
 		name: 'Jane Smith'
 		age: 34
-
-
-Items without names or keys are anonymous and automatically given names/indexes:
-
-
-	Stooges:
-		Larry						[1]
-		Curly						[2]
-		Mo							[3]
 
 
 Blocks can optionally be terminated with 'end', or 'blockname end':
@@ -50,6 +42,68 @@ Blocks can optionally be terminated with 'end', or 'blockname end':
 
 
 
+Types
+-----
+
+Types are values and go to the right of the colon, before the value:
+
+	year: integer 2001
+
+Types can be specified alone for constructing compound types
+
+	product:
+		name: string
+		price: decimal
+
+
+
+
+Metadata
+--------
+
+Metadata fields are read with two dots:
+
+	thisYear..value : 2024
+	thisYear..type	: integer
+	thisyear..name	: thisYear
+
+
+Metadata is an array, so this would be equivalent
+
+	thisYear
+		..
+			value : 20224
+			type
+			name
+
+
+
+Anonymous values
+----------------
+
+Items without names or keys are anonymous values and automatically given names/indexes:
+
+	stooges:
+		Larry						[1]
+		Curly						[2]
+		Mo							[3]
+
+
+Anonymous types can be used as placeholders:
+
+	class:
+		student
+			name: Alice
+		student
+			name: Bob
+		student:
+			name: Charlie
+
+
+
+
+Brace syntax
+------------
 
 Blocks can also be denoted with braces:
 
@@ -118,5 +172,3 @@ Or with braces - though note the indentation on the parent is still significant 
 			name:	'corn flakes';
 			price:	$9.99;
 		}
-
-

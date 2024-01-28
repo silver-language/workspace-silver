@@ -30,13 +30,15 @@ Or just:
 
 
 I'm not sure that I need a special syntax for this - is it as simple as just stating the type?
-
 This last example also requires that we need a way to specify things like one-of, one-or-more-of etc.
+
+I'm pretty sure this is going to be rather more involved.
+
 
 
 Aliasing (imports)
 ------------------
-Most languages call this an import. I don't like that much - in most cases it's simply a shortcut reference, or an alias.
+Often called something like import. I don't like that much - it seems to me to often just be a shortcut reference, or an alias.
 Need way to specify aliases relevent for a document.
 
 Could be something straightforward like:
