@@ -82,3 +82,36 @@ What if result was actual body???
 
 
 
+
+
+
+Return after a while
+--------------------
+Have another go...
+
+
+	factorial: function
+		parameter: integer number
+		result: integer number * factorial(number: number-1)
+
+
+I'm still not really sure how I want the body/result to work.
+I don't think I can use the result delaration as result could be either a type or value...
+That also ignores the zero case. I'll try an experimental match syntax:
+
+
+	factorial: function
+		parameter: integer number
+		result: integer match (number = 0)
+			true	: 1
+			false	: factorial(number: parameter.number-1)
+	end factorial
+
+
+That looks like it will work in this case, though the function body still needs work.
+Also, and this might be a technicality, but factorial might not be strictly pure like this?
+Does a reference to itslef need to be passed in or is that getting too pedantic?
+Not sure, might be able to make an exception for the same function.
+
+
+
