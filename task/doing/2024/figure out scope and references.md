@@ -22,4 +22,34 @@ Universal and Modules
 
 These should gain canonical namespaces, something like
 
-	silver.core
+	silver.core.system.file
+	silver.core.time.date
+	module.blah...
+
+etc
+
+Project, directory and file
+---------------------------
+
+A project will define it's own namespace, from which you can use relative paths
+
+	myProject/component/util
+
+Or construct logical paths using an alias like system
+
+path:
+	project.core : myProject/component/util
+
+
+
+So at this point it'll seems that we'll need two different systems - logical paths and literal/relative paths.
+
+I think it would be smart at this point review how a few other languages handle this - I'm not smart enough to get it right without some help.
+
+One thing I'd also like to be able introduce here is visibilty.
+
+
+
+Review other languages
+----------------------
+Gonna start with rust, go and node.

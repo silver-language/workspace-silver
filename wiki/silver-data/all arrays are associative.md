@@ -40,3 +40,6 @@ so the general idea...
 The distinguishing feature
 
 
+Under the hood
+--------------
+If you specify names and types that be stored as something more efficent, then we'll do that.

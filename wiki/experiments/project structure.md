@@ -27,6 +27,7 @@ But there are a few more parts that are probably needed:
 * A base system for allowed names, and variants - a subset of string
 * A basic type system that can expanded upon
 * The ability to reference other nodes, locally or externally
+* The ability to read and write files
 
 
 There are a few questions that could arise from this:
