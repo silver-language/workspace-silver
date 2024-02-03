@@ -1,5 +1,6 @@
 
-
+Inspiration
+===========
 
 
 
@@ -74,6 +75,10 @@ A very good video on music notation by Tantacrul
 	The analogy to computer languages is how much of of the languages basic rules are compressed into it's syntax.
 	Should programming languages be fully expanded to make them more readable?
 	Could a universal fully expanded language be created?
+
+
+"Stop Writing Dead Programs" by Jack Rusher (Strange Loop 2022)
+	https://www.youtube.com/watch?v=8Ab3ArE8W3s
 
 
 General language discussion

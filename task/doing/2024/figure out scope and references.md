@@ -41,12 +41,24 @@ path:
 	project.core : myProject/component/util
 
 
+Within a file you'd use dot syntax for the file structure:
+
+	service.myHandler
+
+It might be possible to combine these:
+
+	myWebservice/api/web/fooEndpoint.getAllFoo
+
+
 
 So at this point it'll seems that we'll need two different systems - logical paths and literal/relative paths.
 
 I think it would be smart at this point review how a few other languages handle this - I'm not smart enough to get it right without some help.
 
-One thing I'd also like to be able introduce here is visibilty.
+
+Some other things I'd also like to with these:
+ * visibility/readability - can the path be found/read?
+ * execute permissions	- can the path be used/executed?
 
 
 

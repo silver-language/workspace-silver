@@ -98,9 +98,15 @@ Summary
 
 
 
-Links
------
+References
+----------
 
 https://opensource.com/article/17/9/open-source-licensing
+
+
+https://reuse.software/faq/
+https://reuse.software/spec/
+https://github.com/fsfe/reuse-tool
+
 
 https://developers.slashdot.org/story/20/10/16/147252/developer-says-aws-forked-his-project-and-launched-it-as-its-own-service

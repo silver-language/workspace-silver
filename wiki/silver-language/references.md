@@ -19,3 +19,8 @@ https://slashdot.org/story/21/09/01/0252227/w3c-publishes-first-public-working-d
 
 https://science.slashdot.org/story/21/11/28/0352252/researchers-claim-locally-testable-code-breakthrough-with-exotic-multi-dimensional-graph
 https://en.wikipedia.org/wiki/Systematic_code
+
+
+
+
+https://en.wikipedia.org/wiki/Backus%E2%80%93Naur_form

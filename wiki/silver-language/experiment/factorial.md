@@ -110,8 +110,5 @@ That also ignores the zero case. I'll try an experimental match syntax:
 
 That looks like it will work in this case, though the function body still needs work.
 Also, and this might be a technicality, but factorial might not be strictly pure like this?
-Does a reference to itslef need to be passed in or is that getting too pedantic?
-Not sure, might be able to make an exception for the same function.
-
-
-
+Does a reference to itself need to be passed in or is that getting too pedantic?
+Not sure, might be able to include self in scope.

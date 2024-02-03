@@ -52,7 +52,7 @@ I suppose you could do that without the metadata though:
 
 
 	functionName: function
-		result.type: resultType
+		result..type: resultType
 		parameter:
 			param1 : type1
 			param2 : type2
@@ -61,3 +61,42 @@ I suppose you could do that without the metadata though:
 
 		result: resultValue
 	end functionName
+
+
+While this does sort of make sense, it kind of obscures what's actually happening:
+	* result..type is intially mutable
+	* result..type is a supertype of whatever the actual result type is
+	* setting the result finalises the value return and type of the function
+
+
+Type as an ordinary member
+--------------------------
+
+Hang on a sec, why shoudn't type just be an ordinary member of the function struct?
+I made the metadata struct (amongst other reasons) so that the keywords name, type and value could be used in user defined structures, so why not just use type...
+
+
+	functionName: function
+		type: resultType
+		parameter:
+			param1 : type1
+			param2 : type2
+
+		--- do some stuff ---
+
+		result: resultType and/or resultValue
+	end functionName
+
+That makes much more sense.
+
+For that matter any other function modifiers such as visibility, mutability, lifetimes, purity (maybe) could be added in much the same way (if they weren't required in the core of the language).
+
+
+
+
+Type expressions for subtype
+----------------------------
+This gets a bit harder.
+
+Often a function will accept anything that fulfills the contract of the parameter types, so subtypes,subclasses etc.
+Need a way to make this clear, but this falls into the space of type expressions.
