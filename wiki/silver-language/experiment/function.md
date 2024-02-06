@@ -77,14 +77,14 @@ I made the metadata struct (amongst other reasons) so that the keywords name, ty
 
 
 	functionName: function
-		type: resultType
-		parameter:
+		parameter:								//	domain
 			param1 : type1
 			param2 : type2
+		type: resultType						// codomain
 
 		--- do some stuff ---
 
-		result: resultType and/or resultValue
+		result: ?resultType? resultValue		// image/range
 	end functionName
 
 That makes much more sense.

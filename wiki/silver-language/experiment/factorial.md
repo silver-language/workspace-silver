@@ -112,3 +112,15 @@ That looks like it will work in this case, though the function body still needs 
 Also, and this might be a technicality, but factorial might not be strictly pure like this?
 Does a reference to itself need to be passed in or is that getting too pedantic?
 Not sure, might be able to include self in scope.
+
+
+
+If I incorporate latest thoughts on return type:
+
+	factorial: function
+		parameter: integer number		// domain
+		type: integer					// codomain
+		result: match (number = 0)		// image/range
+			true	: 1
+			false	: factorial(number: parameter.number-1)
+	end factorial
