@@ -41,6 +41,13 @@ Probable Exclusions
 
 
 
+
+
+
+
+
+
+
 Other
 -----
 
@@ -56,3 +63,19 @@ https://en.wikipedia.org/wiki/Linked_data#Linked_open_data
 https://www.crockford.com/dec64.html
 
 https://ask.slashdot.org/story/15/06/18/1634205/ask-slashdot-whats-the-harm-in-a-default-setting-for-div-by-zero
+
+
+### Whitespace
+
+https://en.wikipedia.org/wiki/Whitespace_character
+
+https://en.wikipedia.org/wiki/C0_and_C1_control_codes
+
+
+
+
+### Zero One Infinity
+
+https://en.wikipedia.org/wiki/Zero_one_infinity_rule
+
+http://catb.org/jargon/html/Z/Zero-One-Infinity-Rule.html
