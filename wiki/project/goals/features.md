@@ -2,6 +2,16 @@
 Features
 ========
 
+Main features
+-------------
+The main things I want, and why this is really here:
+
+* homoiconicty
+* readability
+* meta programming
+
+
+
 
 
 
