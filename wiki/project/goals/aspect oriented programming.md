@@ -1,6 +1,7 @@
 
 Aspect oriented programming
 ===========================
+
 https://en.wikipedia.org/wiki/Aspect-oriented_programming
 
 AOP considered harmful
@@ -13,3 +14,8 @@ AOP considered harmful
 	Takeaway:
 		don't mutate in advice
 		don't have dynamic join points
+
+
+
+
+Not sure how well AOP will play with functional paradigms, but I'd like to try.
