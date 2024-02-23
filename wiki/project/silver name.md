@@ -1,5 +1,5 @@
-silver name usage
-=================
+Silver name
+===========
 A while back i searched and didn't find much in the way of other projects called silver.
 But they're out there, big or small, whether I know about them or not...
 

@@ -5,29 +5,31 @@ Features
 
 
 
-Silver-data speculative features
---------------------------------
-
-	References/pointers
-	derived types
 
 
-Silver-language main features
------------------------------
-
-	array manipulation
-	code blocks
-	functions
 
 
-Silver-language speculative features
-------------------------------------
+Silver-data
+-----------
 
-	mutability / immutabilty
-	privacy / visibility (cf Java)
-	scope restriction
+Speculative:
+- References/pointers
+- derived types
 
-	lifetimes / borrows (cf rust)
+
+Silver-language
+---------------
+Main:
+- array manipulation
+- code blocks
+- functions
+
+
+Speculative:
+- mutability / immutabilty
+- privacy / visibility (cf Java)
+- scope restriction
+- lifetimes / borrows (cf rust)
 
 
 
@@ -36,3 +38,21 @@ Probable Exclusions
 
 	closures
 	classical OO - classes, inheritance etc
+
+
+
+Other
+-----
+
+### Five star data
+
+https://5stardata.info/en/
+
+https://en.wikipedia.org/wiki/Linked_data#Linked_open_data
+
+
+### Numbers
+
+https://www.crockford.com/dec64.html
+
+https://ask.slashdot.org/story/15/06/18/1634205/ask-slashdot-whats-the-harm-in-a-default-setting-for-div-by-zero
