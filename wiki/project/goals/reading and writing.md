@@ -6,16 +6,12 @@ Silver is for humans.
 Easy to read. Easy to write.
 
 * use whole words
-* be general where you can, but specific when needed.
 * should be fairly readable without an ide or syntax highlighting
 * don't use slang or jargon where a plain word is available
 
 
 
-
-
 https://www.reddit.com/r/ProgrammerHumor/comments/rlgkbl/i_know_a_programmer_when_i_see_one/
-
 
 
 
@@ -34,7 +30,6 @@ Terminology
 
 
 ### Don't capitalise anything that doesn't need capitalisation
-
 
 And even then avoid capital letters unless really necessary.
 
@@ -167,6 +162,41 @@ Avoid:
 
 We're normal humans, most of that ages badly.
 If you're doing something truly iconic like sending a rocket to Jupiter then maybe, otherwise normal words are sufficient.
+
+
+
+
+
+
+
+Whitespace & formatting
+-----------------------
+
+Kevlin Henney - Seven Ineffective Coding Habits of Many Programmers
+	https://youtu.be/ZsHMHukIlJY?t=1374
+
+
+Linux kernel 80 char limit:
+
+	https://lkml.org/lkml/2020/5/29/1038
+	https://www.phoronix.com/scan.php?page=news_item&px=Linux-Kernel-Deprecates-80-Col
+	https://www.phoronix.com/forums/forum/phoronix/general-discussion/1183214-the-linux-kernel-deprecates-the-80-character-line-coding-style
+	https://linux.slashdot.org/story/20/05/31/211211/linus-torvalds-argues-against-80-column-line-length-coding-style-as-linux-kernel-deprecates-it?sbsrc=md
+
+
+Area under indent:
+	https://stevedower.id.au/blog/most-critical-python-metric
+
+https://developers.slashdot.org/story/20/10/11/2127247/spaces-or-tabs-microsoft-developers-reveal-their-preferences
+
+
+
+### Could other whitespace characters be used?
+
+https://en.wikipedia.org/wiki/Whitespace_character
+
+https://en.wikipedia.org/wiki/C0_and_C1_control_codes
+
 
 
 
