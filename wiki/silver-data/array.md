@@ -82,3 +82,7 @@ In this case person without colon after it denotes a value, not a name.
 This deserves some more discussion, as it impacts on good and bad syntax and schema/typing.
 
 
+
+
+https://en.wikipedia.org/wiki/Associative_array
+https://en.wikipedia.org/wiki/Record_(computer_science)
