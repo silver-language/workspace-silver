@@ -41,7 +41,7 @@ Types/properties
 	https://en.wikipedia.org/wiki/Bijection,_injection_and_surjection
 
 
-
+	Can any of these be expressed by a type system?
 
 
 

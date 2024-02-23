@@ -15,10 +15,6 @@ The main things I want, and why this is really here:
 
 
 
-
-
-
-
 Silver-data
 -----------
 
@@ -41,18 +37,10 @@ Speculative:
 - scope restriction
 - lifetimes / borrows (cf rust)
 
+Possible exclusions:
 
-
-Probable Exclusions
--------------------
-
-	closures
-	classical OO - classes, inheritance etc
-
-
-
-
-
+- classical OO - classes, inheritance etc
+- closures
 
 
 
@@ -73,13 +61,6 @@ https://en.wikipedia.org/wiki/Linked_data#Linked_open_data
 https://www.crockford.com/dec64.html
 
 https://ask.slashdot.org/story/15/06/18/1634205/ask-slashdot-whats-the-harm-in-a-default-setting-for-div-by-zero
-
-
-### Whitespace
-
-https://en.wikipedia.org/wiki/Whitespace_character
-
-https://en.wikipedia.org/wiki/C0_and_C1_control_codes
 
 
 
