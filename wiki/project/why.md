@@ -1,0 +1,38 @@
+Why
+===
+
+
+Why is this here?
+-----------------
+
+The original reasons for Silver aren't particularly good.
+Mostly it was frustration and ignorance on my own part.
+See the [Complaints Folder](complaints%20folder/) for some examples.
+
+So I wanted to make a language that was easy to read and had a kind of structural consistency.
+
+
+
+Who is this for?
+----------------
+
+### Primarily: me
+
+Mainly to see if I could make something that had the advanced stuff I was seeing in modern languages, but critically was also pretty easy to read.
+
+I might be a bit programming language dyslexic.
+When I see too many brackets, my eyes glaze over while my brain tries to untangle them.
+A lot of modernised languages have gotten rather bracket heavy.
+
+But it's not just programming languages - I have the same untangling problem when faced with other dense notations - maths, music, complicated diagrams, foreign languages.
+Some of those are best learnt young so you can spend the rest of your life mastering them.
+If you're a bit older though, simpler things have lower opportuntity cost.
+
+
+### Secondarily: anyone else who might be a bit like me
+
+Maybe you're an old fart. Maybe a student. Maybe you feel like there are gaps in your knowledge and postgrad isn't an option.
+
+Possibly you're bit over fads and cool jargon.
+
+Maybe you're AS or ADHD or dyslexic.
