@@ -2,6 +2,9 @@ Open problems
 =============
 
 
+
+
+
 ### Specify a type that contains other types, but not values
 
 
@@ -25,3 +28,7 @@ Would it be advantageous to denote the type in some way such as:
 	name: <type> value			// eg type expression
 
 https://stackoverflow.com/questions/37358364/rules-for-the-use-of-angle-brackets-in-typescript
+
+
+### Interfaces vs types
+Is there a need for a distinction here - or am i reading too much into it?

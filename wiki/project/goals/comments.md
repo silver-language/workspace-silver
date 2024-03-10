@@ -9,12 +9,19 @@ But I understand the criticisms, and have to try to address them.
 Why I like comments
 -------------------
 
-* they humanise code
-* they explain patterns and techniques that might not be obvious to readers
-* they explain things have been tried and failed, and why this works (zero results)
-* they can form documentation (what/how)
-* they can indicate intention, even if the code does not do what it says (is/ought)
-* they can indicate flaws/problems that are known to be present
+They:
+
+* humanise code
+* explain patterns and techniques that might not be obvious to readers
+* explain things have been tried and failed, and why this works (zero results)
+* can form documentation (what/how)
+* indicate intention, even if the code does not do what it says (is/ought)
+* indicate flaws/problems that are known to be present
+* indicate where patterns are broken deliberately (eg DRY)
+* indicate sources of code (third parties etc)
+* indicate code of a temporary nature
+
+
 
 
 What I don't like in comments

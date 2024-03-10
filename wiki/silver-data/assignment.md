@@ -28,6 +28,10 @@ Examples:
 	firstName : string
 	firstName : Alice
 
+
+
+
+
 Block assignment
 ----------------
 
@@ -66,3 +70,16 @@ Nameless blocks can only use the second form:
 		item1: type1 value1
 		item2: type2 value2
 	end
+
+
+
+Refs
+----
+https://developers.slashdot.org/story/23/08/07/0136228/should-a-variables-type-come-after-its-name
+
+https://go.dev/doc/faq#declarations_backwards
+
+https://benhoyt.com/writings/name-before-type/
+
+
+https://go.dev/blog/declaration-syntax
