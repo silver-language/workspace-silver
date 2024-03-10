@@ -1,21 +1,30 @@
-Reading and Writing
-===================
+Prioritise Reading over Writing
+===============================
 
 	Silver is for humans.
 
 
-
-
-Prioritise reading over writing
--------------------------------
-
 Lots of programming languages aim to be readable, but it's subjective, and depends on the background of your presumed audience.
 
-Stating a language is 'readable' is a bit like saying "this car is drivable" or "that food is edible" - most of them are, but some more than others.
+Stating a language is 'readable' is a bit like saying "this car is drivable" or "that food is edible" - most are, but some more than others.
 
 More generally, the '-ability' of a thing depends on purpose and who you're targetting.
 
-So readable depends - I'll try to articulate what I mean by readable here, and why.
+So being readable depends - I'll try to articulate what I mean by readable here, and why.
+
+But overall, readability gets higher priority than writability.
+
+
+
+Prioritise humans over systems
+------------------------------
+
+Your particular field likely has established vocabulary and symbols - when writing your data or module or program you should use them.
+
+Silver itself aims to be as widely read and as agnostic as possible, so tries not to be oriented towards any particular system.
+
+** with caveats
+
 
 
 Prioritise plain language
@@ -40,14 +49,8 @@ Try to be clear to as wide an audience as possible, not just your company, regio
 	anything that requires looking it up on Urban Dictionary
 	memes
 
-Prioritise humans over systems
-------------------------------
 
-Your particular field likely has established vocabulary and symbols - when writing your data or module or program you should use them.
 
-Silver itself aims to be as widely read and as agnostic as possible, so tries not to be oriented towards any particular system.
-
-** with caveats
 
 
 
