@@ -19,9 +19,9 @@ But overall, readability gets higher priority than writability.
 Prioritise humans over systems
 ------------------------------
 
-Silver itself aims to be as widely read and as agnostic as possible, so tries not to be oriented towards any particular system**.
+Silver itself aims to be widely read and as agnostic as possible, so tries not to be oriented towards any particular system**.
 
-Your particular field likely has established vocabulary and symbols - when writing your data or module or program you should use them as appropriate to your audience, but try to write for humans first.
+Your particular field likely has established vocabulary and symbols - when writing your data or module or program you should use them as appropriate to your audience, otherwise try to write for humans first.
 
 ** with caveats
 
@@ -29,36 +29,33 @@ Your particular field likely has established vocabulary and symbols - when writi
 Prioritise plain language
 -------------------------
 
-All natural languages evolve and have time and place variations.
 Use the plainest, most widely understood terms where you can.
 
-* don't use slang or jargon where a plain word is available.
+All natural languages evolve and have time and place variations
 
-### Avoid idiomatic english
 
-This one might be difficult to be objective with.
+Some things to avoid:
+* slang
+* idioms or expressions that might not be widely understood
+* txt spk
+* l33tsp34k
+* emojis 😀
+* anything on Urban Dictionary
+* memes
+* trying to be trendy, cool, funky, cute, hip, obscure
+* jargon
+
+These are difficult to be objective with, and there are layers to this depending (again) on who the audience is, and the intended longevity of the code.
 Try to be clear to as wide an audience as possible, not just your company, region, demographic, country etc.
-
-
-### Avoid terminology trying to be trendy, cool, funky, cute, hip, obscure
-
-	txt spk
-	l33tsp34k
-	emojis ;-)
-	anything that requires looking it up on Urban Dictionary
-	memes
-
-
-
 
 
 
 Prioritise the vertical over the horizontal
 -------------------------------------------
 
-I'll have to try to find some research or something to back me up, but I think humans are naturally pretty good at scanning lists of things, or other spatially structured data like grids.
+Humans have highly evolved visual systems and are good at absorbing structured data such as lists, grids, graphs, charts etc,
 
-In text I think it's easier to achieve structure vertically, so that will be prioritised.
+In text it's easier to achieve structure vertically, so that will be prioritised.
 
 
 Prioritise nouns over verbs
@@ -140,7 +137,6 @@ Ref: https://en.wiktionary.org/wiki/imports https://en.wiktionary.org/wiki/runs 
 
 Prioritise lowercase over uppercase
 -----------------------------------
-
 
 Lowercase in english is easier to parse than uppercase.
 
