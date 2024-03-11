@@ -21,11 +21,9 @@ Prioritise humans over systems
 
 Silver itself aims to be as widely read and as agnostic as possible, so tries not to be oriented towards any particular system**.
 
-Your particular field likely has established vocabulary and symbols - when writing your data or module or program you should use them as appropriate to your audience, but try to be human first.
-
+Your particular field likely has established vocabulary and symbols - when writing your data or module or program you should use them as appropriate to your audience, but try to write for humans first.
 
 ** with caveats
-
 
 
 Prioritise plain language
