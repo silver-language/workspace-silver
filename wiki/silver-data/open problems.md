@@ -3,9 +3,6 @@ Open problems
 
 
 
-
-
-
 References
 ----------
 
