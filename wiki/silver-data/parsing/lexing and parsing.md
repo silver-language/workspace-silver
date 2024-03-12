@@ -1,6 +1,9 @@
 
-Parsing
-=======
+Lexing and Parsing
+==================
+
+
+
 
 https://www.perl.com/pub/2012/10/an-overview-of-lexing-and-parsing.html/
 https://www.reddit.com/r/ProgrammingLanguages/comments/gdt3xd/why_lexing_and_parsing_should_be_separate/
@@ -12,6 +15,11 @@ https://en.wikipedia.org/wiki/Context-free_grammar
 
 
 While there are still a few design decisions left to iron out, here's the start of some parsing ideas.
+
+
+
+
+
 
 
 Algorithm sketch
