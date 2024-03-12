@@ -2,8 +2,6 @@
 Features
 ========
 
-Main features
--------------
 The main things I want, and why this is really here:
 
 * homoiconicty
@@ -11,6 +9,17 @@ The main things I want, and why this is really here:
 * meta programming
 
 
+
+Homoiconicity
+-------------
+
+I want the language to be it's own data structure.
+
+https://en.wikipedia.org/wiki/Homoiconicity
+
+https://docs.microsoft.com/en-us/archive/blogs/ericlippert/five-dollar-words-for-programmers-part-three-homoiconic
+
+https://en.wikipedia.org/wiki/Metaprogramming
 
 
 
@@ -46,8 +55,8 @@ Possible exclusions:
 
 
 
-Other
------
+Other things that might be nice to have
+---------------------------------------
 
 ### Five star data
 
@@ -58,10 +67,15 @@ https://en.wikipedia.org/wiki/Linked_data#Linked_open_data
 
 ### Numbers
 
+Integers being aribtrary precision from the beginning (no integer overflow)
+https://youtu.be/yE5Tpp2BSGw?t=2167
+
+
+
+
 https://www.crockford.com/dec64.html
 
 https://ask.slashdot.org/story/15/06/18/1634205/ask-slashdot-whats-the-harm-in-a-default-setting-for-div-by-zero
-
 
 
 
