@@ -1,6 +1,6 @@
 
 
-Schema and type
+Type and schema
 ===============
 Once, I thought this might be easy....
 
@@ -34,18 +34,14 @@ This is the easier of the two.
 
 If i have a classroom schema it might look like
 
-	person
-		'name'		: string
-		'address'	: string
-		'phone'		: string
+	Person : Type
+		name	: String
+		address	: String
+		phone	: String
 
-	'teacher'		: person 		// singular
-	'class':						// multiple
-		person
-
-
-
-
+	teacher		: Person 		// singular
+	class:
+		Person					// multiple
 
 
 Multiplicity
@@ -67,39 +63,42 @@ Data, schema and type
 
 Just some ideas that came to me today....
 
-	Data
-		all values should resolve to literals or references
+### Data
 
-		In pure data things like schemas and types could be present, so that's not a problem, but it would be preferable if the schemas and types were defined.
-		That's not so much my problem though.
-		That's the end programmer's problem.
+all values should resolve to literals or references
 
-
-	Schema
-		All values should resolve to literal or primitive types, or other schemas.
-
-		A schema should probably not contain any literals, except maybe for documentation/comments/informational text.
-
-		Actually scratch that, extended runtime validation is often included in schemas, so literals are definitely needed, eg enforcing a value is in a certain range or length or format.
+In pure data things like schemas and types could be present, so that's not a problem, but it would be preferable if the schemas and types were defined.
+That's not so much my problem though.
+That's the end programmer's problem.
 
 
-	Types
+###	Schema
 
-		Types can only be composed of other types.
-		These are things that can be checked at compile time, and do not include runtime checks for values.
+All values should resolve to literal or primitive types, or other schemas.
 
-		It might be nice though to have a way to declare literals in a special 'meta' way because this will be handy for comments/documentation.
+A schema should probably not contain any literals, except maybe for documentation/comments/informational text.
 
-		Also I find myself wondering if an immutable constant, something that can never change, could be included in a type?
+Actually scratch that, extended runtime validation is often included in schemas, so literals are definitely needed, eg enforcing a value is in a certain range or length or format.
 
 
-	So then
-		types are expressions built out of types
-		types are checked at compile time
+### Types
 
-		schema is a specific language for enforcing type and format of data, and is a superset of type
+Types can only be composed of other types.
+These are things that can be checked at compile time, and do not include runtime checks for values.
 
-		data can contain literal, schema, and type
+It might be nice though to have a way to declare literals in a special 'meta' way because this will be handy for comments/documentation.
+
+Also I find myself wondering if an immutable constant, something that can never change, could be included in a type?
+
+
+So then:
+
+	types are expressions built out of types
+	types are checked at compile time
+
+	schema is a specific language for enforcing type and format of data, and is a superset of type
+
+	data can contain literal, schema, and type
 
 
 
@@ -189,5 +188,3 @@ I should start to get cracking on the simplest type/schema for silver data then,
 
 	silver-data:
 		array or string
-
-

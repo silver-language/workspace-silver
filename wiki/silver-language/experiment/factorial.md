@@ -1,6 +1,6 @@
 
 
-factorial
+Factorial
 =========
 
 
@@ -105,7 +105,7 @@ That also ignores the zero case. I'll try an experimental match syntax:
 		result: integer match (number = 0)
 			true	: 1
 			false	: factorial(number: parameter.number-1)
-	end factorial
+	factorial end
 
 
 That looks like it will work in this case, though the function body still needs work.
@@ -123,4 +123,16 @@ If I incorporate latest thoughts on return type:
 		result: match (number = 0)		// image/range
 			true	: 1
 			false	: factorial(number: parameter.number-1)
-	end factorial
+	factorial end
+
+
+
+With capitalised types:
+
+	factorial : Function
+		parameter : Integer number		// domain
+		type : Integer					// codomain
+		result : match (number = 0)		// image/range
+			true	: 1
+			false	: factorial(number: parameter.number-1)
+	factorial end
