@@ -1,5 +1,5 @@
-Comments
-========
+Comments and Documentation
+==========================
 
 I'm generally in favour of comments.
 
@@ -33,14 +33,25 @@ Standard criticisms of comments
 They (can):
 
 * be superfluous / state the obvious
-* be incorrect/misleading/out of date (comments lie)
-* add visual clutter
+* be incorrect/misleading/out of date (comments lie/get bugs)
 * stand-in for poorly written code, when the code could be wrtten more clearly
 * add refactoring burden
+* commented out leftover code
+* use as visual markers
+* add visual clutter
+
+I agree with most of these to a degree, except perhaps the last.
+I'm guilty of all though.
 
 
 Don't Write Comments | CodeAesthetic
 https://www.youtube.com/watch?v=Bf7vDBBOBUA
+
+	There's something like an inverse no true scotsman or a shifting goalposts here - if comments are good then they are documentation
+
+
+Code Like a Pro : Comments | How to Write Code Professionally (With Code Examples)
+https://www.youtube.com/watch?v=ZpFwlwt7PNo
 
 
 
@@ -59,9 +70,6 @@ What I don't like in comments
 -----------------------------
 
 A lot of the usual suspects, like stating the plainly obvious.
-
-
-
 
 ### Functional comments
 
@@ -158,6 +166,34 @@ But better still is to have a separate folder in the repo where all tasks/issues
 * Code change boundaries - commits/merges - are synchronized with task changes
 * Tasks also have types, schemas, logic etc and can be validated against the code, read, manipulated, pulled out to form reports, dependency graphs etc.
 * The issue tracker is always with you no matter where are you are (space, underwater etc)
+
+
+
+
+Comments Vs Documentation
+-------------------------
+
+> These all presume a certain level of quality to the comments.
+
+> There's something like an inverse no true scotsman or a shifting goalposts here - if comments are good then they are documentation
+
+
+Returning to my own statements.
+
+At this point we're starting to argue semantics - I want comments to be good enough to form documentation, which makes them no longer comments? Are we just quibbling about words?
+
+Most of the criticisms are about low value or redundant comments.
+Most of the cases where people are in favour of comments are when they are high-value or necessary.
+
+So with respect to turning comments, documentation and code-state into first class citizens I might need to come up with better terminlogy or a system.
+
+* comments in metadata? is metadata mutable in the first place?
+* have no element called 'comment' - force something else?
+* have documentation elements? bit of a mouthful
+* have no traditional 'hard' comments at all? Probably not - far too useful for debugging - could enforce rules for them though.
+
+
+
 
 
 
