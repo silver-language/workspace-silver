@@ -10,11 +10,18 @@ In primary data
 	meta
 	end
 
-basic types
 
-	type
-	array
-	string
+
+Types
+-----
+
+	Type
+	Array
+	String
+
+	of
+	and
+	or
 
 
 In metadata
@@ -23,3 +30,6 @@ In metadata
 	name
 	type
 	value
+	first
+	last
+

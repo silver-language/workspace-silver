@@ -1,12 +1,12 @@
-Open problems
-=============
+Open problems - data
+====================
 
 
 
 References
 ----------
 
-I think I need a way to have references to other parts of data:
+I need a way to have references to other parts of data:
 
 * within a document
 * to another document
@@ -57,16 +57,45 @@ This is important because I want language features and modules (beyond a core mi
 The scoping of these allowances/restrictions will need some consideration.
 
 
-Collections of items-of-type
-----------------------------
+Collections of items-of-type (Generics)
+---------------------------------------
 
-	student: array
-		name: string
-		course: string
+	Student: Array
+		name: String
+		course: String
 
-	class: array of student
+	Class: Array of Student
 
 I've used the 'of' syntax informally in a few discussion bits, but I need to decide on something.
+
+
+Placeholders for generics
+-------------------------
+
+Using the above example, if we're creating a small class
+
+	class101: Class
+		Student
+			name: Carol
+			course: medicine
+		Student
+			name: Bob
+			course: biology
+
+In these examples 'student' becomes a generic placeholder so the indentation makes sense.
+I'm fine with that, and it allows some nice things like lambdas.
+But in some cases it might get cumbersome, so I've wondered if you could do something like this:
+
+	class101: Class
+		*
+			name: Carol
+			course: medicine
+		*
+			name: Bob
+			course: biology
+
+Where the types were well known.
+It would have to come as secondary consideration though, after all more important syntax was decided, particularly path matching/references that could profitably use an asterisk.
 
 
 The difference between one-of-an-item and many-of-an-item

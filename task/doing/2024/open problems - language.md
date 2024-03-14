@@ -7,28 +7,43 @@ Open problems
 
 ### Specify a type that contains other types, but not values
 
-
-person
-
+Eg in a the type of Function, the parameters accept types, but not values.
 
 
-### Is a special syntax needed for types?
+	Function: Type
+		parameter: Array of Parameter
+		type: Type
+		result: Type or Value
+	Function end
 
-Everything so far has just been:
+	Parameter: Type
 
-	name: value
-	name: type
-	name: type value
+Something like that.
+But not sure yet.
 
-without any special way of distinguishing the type from the value, just presuming it can be resolved in parsing.
 
-Would it be advantageous to denote the type in some way such as:
-
-	name: Type value			// capitalisation
-	name: <type> value			// eg type expression
-
-https://stackoverflow.com/questions/37358364/rules-for-the-use-of-angle-brackets-in-typescript
 
 
 ### Interfaces vs types
 Is there a need for a distinction here - or am i reading too much into it?
+
+
+### Path matching
+
+This is a generic version of references from silver-data (which I haven't even decided upon yet).
+
+Say I decide something like this for references:
+
+	project.moduleName.item.child[3]
+
+or whatever, I also want to be to add things like wildcards, eg:
+
+	project.*.item.meta.name
+
+So i can get a list of item names in all modules (say).
+
+This sort of stuff is present in lots of languages so need to do a review
+* xpath
+
+
+
