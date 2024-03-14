@@ -3,8 +3,6 @@ Lexing and Parsing
 ==================
 
 
-
-
 https://www.perl.com/pub/2012/10/an-overview-of-lexing-and-parsing.html/
 https://www.reddit.com/r/ProgrammingLanguages/comments/gdt3xd/why_lexing_and_parsing_should_be_separate/
 https://github.com/oilshell/oil/wiki/Why-Lexing-and-Parsing-Should-Be-Separate
@@ -15,8 +13,6 @@ https://en.wikipedia.org/wiki/Context-free_grammar
 
 
 While there are still a few design decisions left to iron out, here's the start of some parsing ideas.
-
-
 
 
 
@@ -82,12 +78,6 @@ end
 
 
 
-
-
-
-
-
-
 File datastructure
 -------------------
 
@@ -135,3 +125,10 @@ Langauge datastructure
 		assignment
 			sequence number
 				source -> file.line.char
+
+
+
+
+
+Return after a while
+--------------------
