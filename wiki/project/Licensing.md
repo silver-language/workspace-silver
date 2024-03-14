@@ -2,6 +2,9 @@
 Licensing
 =========
 
+https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository
+https://opensource.guide/legal/#which-open-source-license-is-appropriate-for-my-project
+
 For:
 	format, library
 		silver-data
@@ -72,6 +75,7 @@ Licenses are for currently available implementations presumably
 	c#				2000			mixed - MIT, GPL variants, other
 	Groovy			2003			Apache License 2.0
 	Scala			2004			Apache License 2.0
+	F#				2005			MIT
 	Clojure			2007			Eclipse Public License
 	Go				2009			3-clause BSD[4] + patent grant[10]
 	Rust			2010			MIT or Apache 2.0[6]
@@ -79,6 +83,7 @@ Licenses are for currently available implementations presumably
 	TypeScrpt		2012			Apache License 2.0
 	Julia			2012			MIT (core),[2] GPL v2;[10][12]
 	Lucee			2015			LGPL v2.1
+	Zig				2016			MIT
 
 
 Note the difference between the language itself and the implementation (compilers, tooling etc).

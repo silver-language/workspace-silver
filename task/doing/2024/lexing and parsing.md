@@ -132,3 +132,33 @@ Langauge datastructure
 
 Return after a while
 --------------------
+
+
+
+AST nodes
+
+	file:
+		line
+
+	line:
+		indent item
+
+	item
+		value | type | assignment
+
+	assignment
+		has a colon present
+
+	value
+		string beginning with lowercase or number
+
+	type
+		capitalised string
+
+	assignment
+		name : typedValue | type | value
+
+	typedValue
+		type value
+
+
