@@ -138,27 +138,30 @@ Return after a while
 AST nodes
 
 	file:
-		line
+		line +
 
 	line:
-		indent item
+		indent statement
 
-	item
-		value | type | assignment
-
-	assignment
-		has a colon present
-
-	value
-		string beginning with lowercase or number
-
-	type
-		capitalised string
+	statement:
+		assignment | expression
 
 	assignment
-		name : typedValue | type | value
+		name : expression
+
+	expression
+		typedValue | type | value
 
 	typedValue
 		type value
 
+	type
+		capitalised string
 
+	value
+		string beginning with lowercase or number
+
+
+
+I need to clarify statements and expressions.
+In silver bare expressions are assignments of sorts, but need to clear this up.

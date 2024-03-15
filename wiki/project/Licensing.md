@@ -79,9 +79,11 @@ Licenses are for currently available implementations presumably
 	Clojure			2007			Eclipse Public License
 	Go				2009			3-clause BSD[4] + patent grant[10]
 	Rust			2010			MIT or Apache 2.0[6]
+	Dart			2011			BSD
 	Kotlin			2011			Apache License 2.0
 	TypeScrpt		2012			Apache License 2.0
 	Julia			2012			MIT (core),[2] GPL v2;[10][12]
+	Swift			2014			Apache License 2.0
 	Lucee			2015			LGPL v2.1
 	Zig				2016			MIT
 
