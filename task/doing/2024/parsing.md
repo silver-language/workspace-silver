@@ -138,13 +138,14 @@ Return after a while
 AST nodes
 
 	file:
-		line +
+		line*
 
 	line:
-		indent statement
+		blank line
+		| indent* statement
 
 	statement:
-		assignment | expression
+		assignment | expression | block end
 
 	assignment
 		name : expression
@@ -156,12 +157,13 @@ AST nodes
 		type value
 
 	type
-		capitalised string
+		capitalised string | type expression
 
 	value
 		string beginning with lowercase or number
 
-
+	type expression
+		unknown just yet
 
 I need to clarify statements and expressions.
 In silver bare expressions are assignments of sorts, but need to clear this up.
