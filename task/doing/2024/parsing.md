@@ -167,3 +167,16 @@ AST nodes
 
 I need to clarify statements and expressions.
 In silver bare expressions are assignments of sorts, but need to clear this up.
+
+
+
+
+My first naive thought is to split it all down by regex, but this will create half tree/half lexed symbols.
+The lines will be lexed into symbols, but blocks not gouped into trees.
+Needs to refine.
+
+This might be useful for building a line/character map though.
+
+I could be used as a first pass maybe?
+
+A second pass for grouping the blocks?
