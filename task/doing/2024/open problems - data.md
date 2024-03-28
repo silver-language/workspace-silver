@@ -127,3 +127,21 @@ Array of student:
 
 Without more context these look the same.
 I'm not sure this is a problem just yet - context might clear it up just fine.
+
+
+
+Text that happens to begin with a type
+--------------------------------------
+
+myBlock: SomeType
+	Integer is a type of number
+	String is a standard type
+	Function is a special kind of block
+	Boolean can only be true or false
+
+How do we allow text like that?
+
+* Force SomeType to only allow string children?
+* Require quotes around the string
+
+Requiring quotes is probably the better because it's more obvious, but string-only blocks could be done.
