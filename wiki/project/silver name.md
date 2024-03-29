@@ -29,3 +29,15 @@ https://github.com/ggreer/the_silver_searcher
 https://geoff.greer.fm/ag/
 
 Uses 'ag' on the command line and for file extension.
+
+
+
+
+
+
+refs
+----
+https://en.wikipedia.org/wiki/Special:PrefixIndex/Silver
+https://en.wikipedia.org/wiki/Special:PrefixIndex?prefix=Silver&namespace=0&hideredirects=1
+
+https://en.wikipedia.org/wiki/Domesticated_silver_fox
