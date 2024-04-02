@@ -91,7 +91,20 @@ Probably do this most of the time:
 	'H1 is how you write a first level heading'
 
 
+With separate types
+-------------------
+This is just a quick bash, not too serious:
 
+	Document: Array of Element
 
+	Element: Title | Code | Quote | Paragraph | Link | UnorderedList | OrderedList
+
+	Title; String
+	Code: Array of String
+	Quote: Array of String
+	Paragraph Array of String
+	Link: String
+	OrderedList: Array of String
+	UnorderedList: Array of String
 
 
