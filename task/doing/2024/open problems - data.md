@@ -159,3 +159,62 @@ How do we allow text like that?
 
 Requiring quotes is probably a bit better because it's more obvious, but string-only blocks could be done.
 
+
+
+Using Type names for block ends
+-------------------------------
+
+So far I've only used ordinary names for block ends:
+
+	foo: Array of String
+		lorem ipsum
+		dolor sit
+		amet
+	foo end
+
+But there are a couple of cases where it might be useful to end the block with the type instead.
+The most obvious is Types block themselves:
+
+	Function: Type
+		type: Type
+		parameter: Array of Parameter
+		result: Any
+	Function end
+
+That's pretty straightforward, it's just the name again, but this time the type - I'll make this mandatory.
+
+The other one though is for anonymous blocks (blocks without names) - let's try with a lambda:
+
+	Function					// no colon, this is the type of the block, not the name
+		type: String
+		parameter:
+			string: String
+		result: frobnicate(string)
+	Function end
+
+Okay so it looks the same as typedef end above, but in this case it's ending the block of the anonymous function.
+In all previous discussion I'd only allowed an anonymous end like this:
+
+	Function					// no colon, this is the type of the block, not the name
+		type: String
+		parameter:
+			string: String
+		result: frobnicate(string)
+	end
+
+Need to decide on one of these.
+There'll be a few use cases to consider - large data documents will be one.
+My initial preference is enforce named-only for block ends for consistency.
+For large nested documents where named ends are probably the most helpful, it's probably better to for the user to actually just use a name, but we'll see.
+
+
+
+When block ends are required
+----------------------------
+
+This one irks me a bit because it's slightly inconsistent, but I want to make block ends mandatory for all but the innermost blocks.
+I'll see how that works out.
+It might make things weird, for instance without editor support, indenting and outdenting might require additional edits.
+With editor support, indenting and outdenting would add or remove block ends as needed.
+
+

@@ -58,7 +58,7 @@ Well that's the basic idea, and seems like it would accomodate a certain amount 
 The names become like ids, which could be useful for anchors and such, but could also be ommitted as anonymous nodes:
 
 	myDoc: Document
-		H1 This is the heading of the document
+		Title 'This is the heading of the document'
 
 		Paragraph
 			lorum ipsum
@@ -95,11 +95,13 @@ With separate types
 -------------------
 This is just a quick bash, not too serious:
 
+Types first:
+
 	Document: Array of Element
 
 	Element: Title | Code | Quote | Paragraph | Link | UnorderedList | OrderedList
 
-	Title; String
+	Title: String
 	Code: Array of String
 	Quote: Array of String
 	Paragraph Array of String
@@ -108,3 +110,5 @@ This is just a quick bash, not too serious:
 	UnorderedList: Array of String
 
 
+
+With those in place,
