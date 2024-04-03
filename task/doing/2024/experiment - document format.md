@@ -99,7 +99,13 @@ Types first:
 
 	Document: Array of Element
 
-	Element: Title | Code | Quote | Paragraph | Link | UnorderedList | OrderedList
+	Element: choice of
+		Title
+		Code
+		Quote
+		Paragraph Link
+		UnorderedList
+		OrderedList
 
 	Title: String
 	Code: Array of String
@@ -108,6 +114,10 @@ Types first:
 	Link: String
 	OrderedList: Array of String
 	UnorderedList: Array of String
+
+At this point a fairly general document format might be a little ambitious becuase of it's open ended nature.
+A slightly simpler example might be something like these task documents themselves.
+
 
 
 

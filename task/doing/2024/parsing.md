@@ -16,8 +16,6 @@ While there are still a few design decisions left to iron out, here's the start 
 
 
 
-
-
 Algorithm sketch
 ----------------
 One big loop over file lines:
@@ -133,8 +131,6 @@ Langauge datastructure
 Return after a while
 --------------------
 
-
-
 AST nodes
 
 	file:
@@ -180,3 +176,12 @@ This might be useful for building a line/character map though.
 I could be used as a first pass maybe?
 
 A second pass for grouping the blocks?
+
+Things I think I want:
+	Every node/piece to have information about where in the source file it is - line,column - 1 based
+	Perhaps a unique identifier per node (could be optional?)
+
+
+
+
+
