@@ -29,8 +29,9 @@ https://stackoverflow.com/questions/37358364/rules-for-the-use-of-angle-brackets
 
 
 
-Product and Sum Types
----------------------
+Product and Sum Types (AND / OR types)
+--------------------------------------
+
 https://ericnormand.me/podcast/what-are-product-and-sum-types
 
 https://en.wikipedia.org/wiki/Algebraic_data_type
@@ -43,6 +44,9 @@ https://en.wikipedia.org/wiki/Product_type
 aka
 	Tuple
 	Record
+	Struct
+
+This is my basic array.
 
 
 ### Sum Type, ie OR
@@ -50,7 +54,7 @@ https://en.wikipedia.org/wiki/Tagged_union
 
 aka
 	enum
-
+	discrimnated union
 
 NB note the difference between this and https://en.wikipedia.org/wiki/Enumerated_type
 
@@ -60,18 +64,62 @@ https://langdev.stackexchange.com/questions/2326/what-are-pros-and-cons-of-tagge
 I think I want the tagged union type?
 
 
-Enumerations - 'or' types
--------------------------
+Sum/Enumerations/Unions - 'OR' types
+------------------------------------
 
 https://en.wikipedia.org/wiki/Enumerated_type
+https://en.wikipedia.org/wiki/Tagged_union
+
+In typescript prefer discriminated union over enum
 
 
-	suit: Enum of String
+Fast F#: Intro to Discriminated Unions
+https://www.youtube.com/watch?v=vgMYQ1clE0E
+	'or' cases have names separate from the types
+
+
+
+	Suit: choice of String
 		hearts
 		diamonds
 		clubs
 		spades
 
+	myCard: Card
+		suit: Suit 'clubs'
+
+Not sure how to to clearly discriminate literals or types yet
+
+	Document: Array of Element
+
+	Element: choice of Type
+		Title
+		Link
+		Code
+		Paragraph
+		...
+
+Have to figure out the best way to write this out - 'choice' needs to be a keyword of some kind, so the type system needs some utility keywords.
 
 
-	Document
+
+
+
+
+
+
+Utility Types / Type keywords
+-----------------------------
+
+	of
+	choice
+
+See for example
+	https://www.typescriptlang.org/docs/handbook/utility-types.html
+
+
+
+
+
+
+
