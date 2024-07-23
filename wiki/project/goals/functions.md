@@ -1,6 +1,31 @@
 Functions
 =========
 
+https://en.wikipedia.org/wiki/Function_(mathematics)
+
+
+One core distinction I'd like to make is the difference between functions and procedures.
+
+### Functions
+
+* Pure - strictly map input to output
+* Have no side effects
+* Memoizable
+* Have no hidden state, ie no closures
+* Can be anonymous (lambdas)
+* Will be idempotent
+* Can only call other functions to preserve these properties
+
+
+### Procedures
+
+* Everything else
+* Can have side effects
+* Not usually memoizable
+* Could include closures
+* Could maybe reference outside scope, eg object methods
+* Not necessarily idempotent
+
 Distinguishable from procedures
 
 
@@ -10,20 +35,26 @@ https://www.youtube.com/watch?v=O2lZkr-aAqk&list=PLbgaMIhjbmEnaH_LTkxLI7FMa2Hsna
 
 
 
-Types/properties
-----------------
+Function Types & Properties
+---------------------------
 
 ### Pure
-Does the function operate purely on its arguments or not
+
+https://en.wikipedia.org/wiki/Pure_function
+* Identical output for input
+* No side effects
+
+I'd like functions to be pure, and if one of these properties exist but not the other, a different type is used, eg procedure but with additional properties.
+
 
 
 ### Side-effects
+https://en.wikipedia.org/wiki/Function_(computer_programming)#Side_effects
 
 
 ### Idempotence
 
 Can the function be run repeatedly without changing the result
-
 
 https://en.wikipedia.org/wiki/Idempotence
 
@@ -89,32 +120,55 @@ If you want side effects, or scope, you want a procedure (or subroutine).
 
 I'm not sure if that is better as a base rule of the language:
 
-	factorial
-		type: function			// where 'pure' is implied
+	factorial: Function			// where 'pure' is implied
 
-	print
-		type: procedure			// where the rules are relaxed
+	print: Procedure			// where the rules are relaxed
 
 
 Or as function metadata:
 
-	factorial
-		type: function
+	factorial: Function
 		pure: true				// pure is a particular property of specific functions
 
-	print
-		type: function
+	print: Procedure
 		pure: false				// where the rules are relaxed
 
 
+If you allow type literals something like this could be done in the type system:
+
+	Function: Procedure
+		pure: true
+		...
+
+Which could read something like Function is a procedure that the pure property fixed to true.
 
 
-The former is terser, and would be nicer to the reader, but the second is more flexible, and allows
-for more flexibly denoting different kinds of function properties.
 
-
-The ultimate i think would be being able to define a nice set of properties of things like functions and procedures
---in the language itself-- like the second, then use the first thereafter.
+The ultimate i think would be being able to define a nice set of properties of things like functions and procedures --in the language itself-- like the second, then use the first thereafter.
 This could then be the default, but allows for changing the behaviour for advanced requirements.
 
 Each folder could have an optional '.silver' directory where behaviour could be overridden/changed.
+
+
+
+
+Function/Prcedure type heirarchy
+--------------------------------
+
+A type heirarchy for functions and procedures could be speculated.
+
+
+Procedure
+
+	Function - if pure
+
+	Closure - if hidden state included
+
+	Method - if attached to an object
+
+
+
+
+
+
+
