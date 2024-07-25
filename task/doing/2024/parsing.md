@@ -185,3 +185,44 @@ Things I think I want:
 
 
 
+Lexing and/or parsing
+---------------------
+
+I really think I need to take a step back here for a bit.
+There's *loads* out there on lexing and parsing and I'm not sure I've really gotten much of it.
+
+https://github.com/oils-for-unix/oils/wiki/Why-Lexing-and-Parsing-Should-Be-Separate
+
+* the lexer should only produce a stream of symbols, ie something like an array
+* Lexing should be easy and fast
+* Parsing is likely to be slow and complicated
+* lexing should stay the same while parsing can change
+
+
+https://stackoverflow.com/questions/2842809/lexers-vs-parsers
+
+* Symbols for the lexer: ASCII characters.
+* Symbols for the parser: the particular tokens, which are terminal symbols of their grammar.
+
+
+https://rustc-dev-guide.rust-lang.org/the-parser.html
+* lexing produces streams of tokens
+* parsing turns the tokens into an AST
+
+
+https://cs.stackexchange.com/questions/39898/why-separate-lexing-and-parsing
+
+
+https://softwareengineering.stackexchange.com/questions/128888/are-separate-parsing-and-lexing-passes-good-practice-with-parser-combinators
+
+https://cs.stackexchange.com/questions/28858/expressive-power-of-lexer-parser
+
+
+Silver-data Lexing and Parsing
+------------------------------
+
+The main thing I've been doing differently so far is to output a symbol tree instead of a symbol stream.
+I think this is mainly because breaking down silver-data is relatively simple.
+I think this will probably still be okay, as long as I don't attempt any logical/syntactical analysis in the initial phase.
+
+

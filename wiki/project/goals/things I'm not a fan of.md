@@ -88,7 +88,7 @@ Currying
 
 Run-of-the-mill stuff
 ---------------------
-Just regular gripes about ordinary language features
+Just regular gripes about ordinary language features and patterns
 
 
 *	function arguments as arrays - see variadic functions

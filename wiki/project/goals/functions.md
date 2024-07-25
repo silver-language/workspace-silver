@@ -11,7 +11,7 @@ One core distinction I'd like to make is the difference between functions and pr
 * Pure - strictly map input to output
 * Have no side effects
 * Memoizable
-* Have no hidden state, ie no closures
+* Have no variable hidden state, ie no closures
 * Can be anonymous (lambdas)
 * Will be idempotent
 * Can only call other functions to preserve these properties
