@@ -14,7 +14,11 @@ Scopes to deal with:
 * modules/plugins - whatever is brought in and allowed
 * project
 * directory
+* package
 * file
+* function/method
+* loop
+* lambda
 
 
 Universal and Modules
