@@ -60,3 +60,9 @@ It also mean you can't leave off the colon on a block assignment like this if yo
 
 In that style 'collection' becomes a value... and as I've discussed elsewhere a pretty handy use of this would be to denote a type.
 But I'd better sort that out properly - see 'name type value'.
+
+
+
+Wrapup
+------
+This has been resolved elsewhere - am moving to a done task to get it out of the wiki.

@@ -160,8 +160,10 @@ So a few thoughts here.
 
 
 See this - it might be a thing (in typescript an Python at least):
-	https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#literal-types
-	https://www.python.org/dev/peps/pep-0586/
+
+https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#literal-types
+https://www.python.org/dev/peps/pep-0586/
+https://typing.readthedocs.io/en/latest/spec/literal.html#literal-types
 
 So i'm not totally detached from reality here.
 

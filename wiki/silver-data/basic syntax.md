@@ -7,7 +7,7 @@ Silver-data main features
 
 The overall form:
 
-	name: type value
+	name: Type value
 
 
 Fundamental value types are array and string
@@ -15,12 +15,12 @@ Fundamental value types are array and string
 
 Simple assignment
 
-	myValue : someType foobar
+	myValue : SomeType foobar
 
 
 Array assignnment
 
-	myArray: someArrayType
+	myArray: SomeArrayType
 		value1
 		value2
 		...

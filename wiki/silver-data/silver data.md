@@ -47,13 +47,13 @@ Types
 
 Types are values and go to the right of the colon, before the value:
 
-	year: integer 2001
+	year: Integer 2001
 
 Types can be specified alone for constructing compound types
 
-	product:
-		name: string
-		price: decimal
+	product: Array
+		name: String
+		price: Decimal
 
 
 
@@ -63,17 +63,17 @@ Metadata
 
 Metadata fields are read with two dots:
 
-	thisYear..value : 2024
-	thisYear..type	: integer
-	thisyear..name	: thisYear
+	thisYear..value = 2024
+	thisYear..Type	= Integer
+	thisyear..name	= thisYear
 
 
 Metadata is an array, so this would be equivalent
 
 	thisYear
 		..
-			value : 20224
-			type
+			value : 2024
+			Type
 			name
 
 
@@ -83,27 +83,27 @@ Anonymous values
 
 Items without names or keys are anonymous values and automatically given names/indexes:
 
-	stooges:
-		Larry						[1]
-		Curly						[2]
-		Mo							[3]
+	stooges: Person
+		'Larry'						[1]
+		'Curly'						[2]
+		'Mo'						[3]
 
 
-Anonymous types can be used as placeholders:
+Anonymous blocks can use types as placeholders:
 
 	class:
-		student
-			name: Alice
-		student
-			name: Bob
-		student:
-			name: Charlie
+		Student
+			name: 'Alice'
+		Student
+			name: 'Bob'
+		Student:
+			name: 'Charlie'
 
 
 
 
-Brace syntax
-------------
+Brace syntax (experimental)
+---------------------------
 
 Blocks can also be denoted with braces:
 
