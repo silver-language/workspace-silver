@@ -226,3 +226,25 @@ I think this is mainly because breaking down silver-data is relatively simple.
 I think this will probably still be okay, as long as I don't attempt any logical/syntactical analysis in the initial phase.
 
 
+Step back - higher level overview
+---------------------------------
+
+While i'm busy getting the lexer functional I want to take a step back and sketch what the parser might look like finished and functional.
+
+High level goals:
+* document -> lexer -> parser -> AST -> usable data tree
+* the ability to include the library into another project and make use of the data
+* the ability to create simple silver-data data structures and serialise/save them
+* have a decent-ish test suite, look at using a standard/community testing package
+* have versioning going
+* publish it as a package at https://pkg.go.dev/
+
+
+When looked at from that perspective, there's a shitton of work to do.
+I might try to project manage this a bit:
+
+* Create an overview task where high level tasks (epics) can be mapped out
+* Create high level tasks and subtasks, checkboxes
+* Break down and/or group tasks as needed
+* Create stages and priorities (mscw)
+
