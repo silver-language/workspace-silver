@@ -5,10 +5,19 @@ The project is called Silver.
 You can make nice things with it.
 
 
+Unicode & Symbols
+-----------------
+
+https://www.unicodecharacter.org/U+1F71B
+https://decodeunicode.org/en/u+1F71B
+https://unicodeplus.com/U+1F71B
+
+https://sciencenotes.org/silver-alchemy-symbols/
 
 
 Other uses of 'silver'
 ----------------------
+
 A while back i searched and didn't find much in the way of other projects called silver.
 But they're out there, big or small, whether I know about them or not...
 

@@ -222,7 +222,14 @@ Silver-data Lexing and Parsing
 ------------------------------
 
 The main thing I've been doing differently so far is to output a symbol tree instead of a symbol stream.
-I think this is mainly because breaking down silver-data is relatively simple.
+I think this is mainly because breaking down silver-data is relatively straightforward.
 I think this will probably still be okay, as long as I don't attempt any logical/syntactical analysis in the initial phase.
+
+So I'll set myself some guidelines:
+* No proper logic in the lexer, eg it should be done mostly with regex
+* Save things like syntax errors for the parser
+
+
+Also I think I've gotten my naming wrong - I think the parser outputs the AST, and the lexer outputs symbols/tokens -
 
 
