@@ -63,19 +63,6 @@ product: Array
 	price: Decimal
 ```
 
-In general
-----------
-
-Statement:
-```
-(name expression): (type expression) | (value expression) | (type expression) (value expression)
-```
-
-Block:
-```
-(name expression): (type expression)
-	(statement)|(block)+
-```
 
 
 Metadata
