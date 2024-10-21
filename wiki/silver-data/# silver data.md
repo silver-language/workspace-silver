@@ -10,7 +10,9 @@ Assignment
 
 Named values must have a colon after the name and before the value:
 
+```yaml
 	year: 2001
+```
 
 
 Blocks
@@ -18,28 +20,30 @@ Blocks
 
 Blocks are denoted by indentation:
 
-	product1:
-		name:	'cat food'
-		price:	$9.99
+```yaml
+product1:
+	name:	'cat food'
+	price:	$9.99
 
-	person:
-		name: 'Jane Smith'
-		age: 34
-
+person:
+	name: 'Jane Smith'
+	age: 34
+```
 
 Blocks can optionally be terminated with 'end', or 'blockname end':
 
-	product1:
-		name:	'cat food'
-		price:	$9.99
-	end
+```yaml
+product1:
+	name:	'cat food'
+	price:	$9.99
+end
 
 
-	product1:
-		name:	'cat food'
-		price:	$9.99
-	product1 end
-
+product1:
+	name:	'cat food'
+	price:	$9.99
+product1 end
+```
 
 
 Types
@@ -47,14 +51,17 @@ Types
 
 Types are values and go to the right of the colon, before the value:
 
-	year: Integer 2001
+```yaml
+year: Integer 2001
+```
 
 Types can be specified alone for constructing compound types
 
-	product: Array
-		name: String
-		price: Decimal
-
+```yaml
+product: Array
+	name: String
+	price: Decimal
+```
 
 
 
@@ -96,11 +103,22 @@ Anonymous blocks can use types as placeholders:
 			name: 'Alice'
 		Student
 			name: 'Bob'
-		Student:
+		Student
 			name: 'Charlie'
 
+### Placeholder for typed anonymous blocks (experimental)
 
+In cases where the type of the child items is known a single colon can be used as a placeholder.
 
+```yaml
+class: Array of Student
+	:
+		name: 'Alice'
+	:
+		name: 'Bob'
+	:
+		name: 'Charlie'
+```
 
 Brace syntax (experimental)
 ---------------------------
