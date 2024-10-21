@@ -2,6 +2,12 @@
 Multiplicity
 ============
 
+```yaml
+type: task
+category: language design
+status: partial progress, ongoing
+priority: normal
+```
 
 In arrays
 ---------

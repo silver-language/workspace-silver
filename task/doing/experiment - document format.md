@@ -1,6 +1,14 @@
 Experiment: Document format
 ===========================
 
+```yaml
+type: experiment
+category: silver-data
+status: mostly done, can be tidied up and added to wiki
+priority: low
+```
+
+
 This stems from a shower thought - what might a simple document format look like in silver?
 For example something that could work as an alternative to markdown or basic html.
 

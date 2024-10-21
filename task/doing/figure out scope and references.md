@@ -1,6 +1,13 @@
 Figure out Scope and References
 ===============================
 
+```yaml
+type: task
+category: language design
+status: partial progress, ongoing
+priority: low
+```
+
 This might get heavy, might not.
 
 The rules for silver language will probably be a bit more strict, for instance I think I want functions to be pure.

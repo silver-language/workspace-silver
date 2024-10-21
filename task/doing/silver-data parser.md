@@ -2,6 +2,13 @@
 Silver-data parser
 ==================
 
+```yaml
+type: programming
+category: silver-data
+status: partial progress, ongoing
+priority: high
+```
+
 
 https://www.perl.com/pub/2012/10/an-overview-of-lexing-and-parsing.html/
 https://www.reddit.com/r/ProgrammingLanguages/comments/gdt3xd/why_lexing_and_parsing_should_be_separate/
