@@ -7,16 +7,18 @@ Warning - very tentative - lexing structure and grammar.
 Need to be clear what's lexing and what's parsing.
 There's lots here I'm not sure about.
 
-Lexing/parsing
---------------
+
+
+Grammar
+-------
 
 ### Document
 
 	(line)*
 
 ### Line
-
-	(empty-line) | (indent)(statement)
+	| (empty-line)
+	| (indent)*(statement)
 
 ### Indent
 
@@ -24,44 +26,80 @@ Lexing/parsing
 
 ### Statement
 
-	| (name): (entityExpression)
-	| (:?)(entityExpression)
-	| (name):
-	| :
+	| (assignment)
+	| (expression)
+	| (block end)
 
 
+### Assignment
+
+	| (type assignment)
+	| (value assignment)
+
+### Type assignment
+
+	(type name) : (type expression)
 
 
+### Value assignment
 
-### Entity Expression
+	(value name)? : (expression)?
+
+
+### Expression
 
 	| (type expression)
 	| (value expression)
 	| (type expression) (value expression)
 
 
-Grammar
--------
+### Type Expression
 
-### Assignment
+	| (type name)
+	| (compound type)
 
-	(name) : (entity)
+### Compound type
 
-### Entity
+	TBD
 
-	| (type)
-	| (simplevalue)
-	| (blockValue)
+### Value Expression
 
-### Simple Value
-
-	(type)(value)
-
-### Block value
-
-	(entity)*
+	TBD
 
 
+### Block end
+
+	| (type block end)
+	| {value block end}
+
+### Type block end
+
+	(type name) End
+
+### Value block end
+
+	(value name) end
 
 
+### Type name
+
+	[A-Z]\w+
+
+### Value name
+
+	| (simple value name)
+	| (quoted value name)
+	| (dynamic value name)
+
+### Simple value name
+
+	[^A-Z]\w+
+
+### Quoted value Name
+
+	"(\w+)"
+
+### Dynamic value name
+
+	TBD
 
