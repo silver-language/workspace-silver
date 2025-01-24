@@ -1,12 +1,16 @@
 Functions
 =========
 
-https://en.wikipedia.org/wiki/Function_(mathematics)
+I'd like to initally distinguish between functions and procedures.
+Methods in the OO sense would need to be clarified, depending on the how the scope inclusion occurred.
 
 
-One core distinction I'd like to make is the difference between functions and procedures.
+Function Types
+--------------
 
 ### Functions
+
+https://en.wikipedia.org/wiki/Function_(mathematics)
 
 * Pure - strictly map input to output
 * Have no side effects
@@ -15,6 +19,7 @@ One core distinction I'd like to make is the difference between functions and pr
 * Can be anonymous (lambdas)
 * Will be idempotent
 * Can only call other functions to preserve these properties
+* Single-valued outputs
 
 
 ### Procedures
@@ -32,11 +37,21 @@ Distinguishable from procedures
 https://www.youtube.com/watch?v=O2lZkr-aAqk&list=PLbgaMIhjbmEnaH_LTkxLI7FMa2HsnawM_&index=3
 
 
+### Methods
+* Could be pure (functions) if the relevent parts of the object scope were passed in, and no mutation occurred.
+* Procedures attached to objects
 
 
+### Other
 
-Function Types & Properties
----------------------------
+Other names for executable units of code:
+* routine/subroutine
+* closure
+* program
+
+
+Function Properties
+-------------------
 
 ### Pure
 
@@ -45,7 +60,6 @@ https://en.wikipedia.org/wiki/Pure_function
 * No side effects
 
 I'd like functions to be pure, and if one of these properties exist but not the other, a different type is used, eg procedure but with additional properties.
-
 
 
 ### Side-effects
@@ -57,6 +71,7 @@ https://en.wikipedia.org/wiki/Function_(computer_programming)#Side_effects
 Can the function be run repeatedly without changing the result
 
 https://en.wikipedia.org/wiki/Idempotence
+
 
 
 
@@ -72,20 +87,20 @@ ouput type - codomain (type) or image (allowed values)
 https://en.wikipedia.org/wiki/Bijection,_injection_and_surjection
 
 
-injective:
+Injective:
 
 	every input has a unique output
 	no collapse in codomain;
 	there may be unmapped members in codomain
 	codomain > image (can be)
 
-surjective:
+Surjective:
 
 	every output is mapped to an input
 	image covers complete codomain;
 	image = codomain (manadatory)
 
-bijective
+Bijective
 
 	(?isomorphic/isomorphism) - both injective and surjective
 	reversable
@@ -96,6 +111,12 @@ bijective
 ?invertable
 
 Can any of these be expressed by a type system?
+
+
+### Single-valued output
+
+This will need clarification, as the notion of 'value' isn't always clear.
+For example are vectors single values or composites.
 
 
 
