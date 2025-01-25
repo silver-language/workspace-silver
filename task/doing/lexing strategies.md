@@ -25,7 +25,7 @@ Silver data is super simple so this *shouldn't* be hard, at least you'd think.
 
 
 Things getting in the way
-------------------------------
+-------------------------
 Some things I've wanted, but shouldn't be blocking progress at this stage.
 
 ### Configurable characters
@@ -54,10 +54,22 @@ The minimum I think I need for now is:
 * quoted values
 And *maybe* quoted names.
 
+I do want to return to this though. I could just set them as internal flags for now.
+
 
 Lexing Strategies
 -----------------
 
+Onto the main show. This all pertains to line-lexing strategies.
+
+Categories:
+* Broad regexes - the dumb lexer, okay for simple well-formed lines, not very flexible
+* Sequential tokens - traditional lexing strategy
+* Initial character - useful in some cases to cut down line type possibilities
+* Final character - similar to above, only useful in a handful of cases
+* Final word - may be able to identify block-ends; could be misleading; not likely useful
+
+The hope is that by combining a few of these I might come up with something better and more flexible than what I have currently.
 
 
 
