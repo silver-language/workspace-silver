@@ -18,7 +18,7 @@ Preamble
 --------
 
 Prior to the dumb-lexer I'd started a somewhat too complicated setup with structures and regex for breaking down the parts of the grammar.
-I was premature and overcooked, so I chucked most of it out to focus on getting *something* working, yielding the dumb lexer.
+It was premature and overcooked, so I chucked most of it out to focus on getting *something* working, yielding the dumb lexer.
 As stated, it's not very flexible so I want more options.
 
 Silver data is super simple so this *shouldn't* be hard, at least you'd think.
