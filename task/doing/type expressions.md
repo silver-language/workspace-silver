@@ -1,12 +1,12 @@
 Type expressions
 ================
 
-
-
-Where needed
-What needed (kinds)
-mvp
-
+```yaml
+type: task
+status: in progress
+blocks: parsing
+priority: medium
+```
 
 
 Is a special syntax needed for types?
@@ -104,10 +104,6 @@ Have to figure out the best way to write this out - 'choice' needs to be a keywo
 
 
 
-
-
-
-
 Utility Types / Type keywords
 -----------------------------
 
@@ -119,6 +115,14 @@ See for example
 
 
 
+Review
+------
+
+TypeScript
+
+c#
+
+Rust
 
 
 

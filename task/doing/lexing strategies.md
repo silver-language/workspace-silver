@@ -30,7 +30,7 @@ Some things I've wanted, but shouldn't be blocking progress at this stage.
 
 ### Configurable characters
 I'd have liked to be able to make things like indents, name separators, quotes and other other delimiters, all configrable.
-So for example you have a file or a folder or project with different values for those.
+So for example you could have a file or a folder or project with different values for those.
 That would be interesting, but it's totally a red herring for now.
 I shouldn't let considerations for this block progress - it's extremely low priority.
 
