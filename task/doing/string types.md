@@ -6,9 +6,9 @@ Looking at lexing strategies and would like to take a little detour into string 
 
 ```yaml
 type: task
-status: mostly done (for now)
+status: done-ish, still hacking
 blocks: lexing
-priority: high
+priority: high-ish
 ```
 
 
@@ -61,6 +61,7 @@ I was wondering if something like these might make sense:
 		Lorem ispum
 		Dolor sit amet
 	greetingTemplate	: String-interpolated "Greetings ${user}, today is ${date}."
+	myHomepage			: String-url "http://www.geocities.com/hollywood/123/my%20homepage.html"
 ```
 
 At a glance they are fairly understandable, but probably misleading from a typing perspective.
@@ -127,7 +128,7 @@ Multiline Strings
 -----------------
 
 In silver having a special type for multiline strings would be valuable to have proper indentation, and make it clear the indentation is ignored.
-How the strings are joined is a question, but a newline would probably suffice for starters.
+How the strings are joined is a question, but a newline would probably do for starters.
 
 Another option (which I've done in example code) is Array of String, which gives the array back to be joined as pleased.
 
@@ -174,7 +175,7 @@ Names will always be a subset of String.
 
 
 ### String interpolation in names
-Eg:
+Contrived example (you probably wouldn't actually do this):
 ```pseudocode
 	loop x
 		loop y
@@ -182,10 +183,6 @@ Eg:
 		loop end
 	loop end
 ```
-
-Not that you'd do it like that.
-
-
 
 Tentative Summary
 -----------------
@@ -203,10 +200,14 @@ This would probably all be mostly okay for something like silver data, but when 
 
 Eg, method chaining:
 ```
-	myFoo		: megaData.map("mobiusStrip").crease("downTheMiddle").fold("up).pocket("done")
-	fooProcess	: "megaData.map("mobiusStrip").crease("downTheMiddle").fold("up).pocket("done")"
+	myFoo		: megaData.map("mobiusStrip").crease("downTheMiddle").fold("up").pocket("done")
+	fooProcess	: "megaData.map("mobiusStrip").crease("downTheMiddle").fold("up").pocket("done")"
 ```
 Brackets take precedence in the first, quotes in the second.
+
+It will probably be necessary to talk about something like context starts and ends, but not for now.
+For silver data the context end always be the line end.
+
 
 
 Backticks and Quote shuffling
@@ -222,48 +223,94 @@ Backticks have almost no use in ordinary prose, so you could use singles and dou
 
 	someProse : String `"The fresh bread is all dried up", said O'Leary to Minogue.`
 
-It'd certainly be unusual - I don't think I've ever seen something like that before.
-Markdown `wouldn't` like it much though.
+Admittedly regular prose like that doesn't appear in ordinary programs much.
+But similar sorts of things definitely would appear in data, markup, config etc.
 
-Admittedly regular prose like that doesn't appear much in most programs.
-However it does in data.
+### Review Backticks
 
-There's an experiment where I've tried to use silver-data for a document format a bit like HTML:
+https://en.wikipedia.org/wiki/Backtick
 
-[experiment - document format](../../wiki/silver-data/example/experiment%20-%20document%20format.md)
+Usage of backticks:
+* JavaScript since es6 - template strings, literals
+* String literals of various kinds: Go (raw), F#, MySQL, R, Scala
+* Command substitution - Perl, PHP, Ruby, Lisp macros, Julia, shell (deprecated)
+* Alternative escape character in PowerShell
+* Markdown for code sections and blocks
+* No meaning as far as I can tell: C#, Python, Rust
 
-Rewritten a bit, with some current ideas:
+Java seems to have gotten into the weeds a bit with their proposals - ended up with Text Blocks instead (afaict).
 
+Suffice to say programming languages are really the only mainstream users of backticks.
+
+### Need to escape?
+
+I've done some code-block experiments here: [experiment - document format](../../wiki/silver-data/example/experiment%20-%20document%20format.md)
+
+The takeaway is basic strings should be literal, and it would be *exceedingly* nice to be able recognise and handle String-multiline in the lexer/parser.
+
+For single line strings or more complicated lines might need to establish some rules.
+Method chaining examples from above and some mess:
 ```
-	myDoc: Document
-		heading: H1 `This is the heading of the document`
-
-		introduction: Paragraph
-			`lorum ipsum`
-			`dolor sit amet`
-
-		H2 `Requirements`
-		UnorderedList:
-			`item 1`
-			`item 2`
-			`item 3`
-
-		H2 `Instructions`
-		OrderedList
-			`do this`
-			`then this`
-			`finally this`
-
-		script: Code
-			`10 print "Hello world"`
-			`20 goto 10`
-
-		references: UnorderedList
-			Link `http://localhost/help`
-myDoc end
+myFoo				: megaData.map(`mobiusStrip`).crease(`downTheMiddle`).fold(`up`).pocket(`done`)
+fooProcess			: `megaData.map(`mobiusStrip`).crease(`downTheMiddle`).fold(`up`).pocket(`done`)`
+complicatedString	: String `` here's a bunch of backticks `````` and some `quasi-markdown` ```
 ```
 
+Probably the easy solution is to just take everything between the first and last backticks within the established context.
+For silver-data everything is one-idea-per-line (one statement or value), so the context always ends at the lineend. I don't think I have any need for brackets in silver-data, but will have to keep an eye on that one.
+For the `myFoo` example you could do something similar, but take everything up to the last backtick before the context end, the close paren in this case.
+
+### Too easy?
+
+This feels *too* easy, I must be missing something.
+Why hasn't anyone used this solution before?
+Better write out some tests and find some counterexamples.
+
+Probably being able to escape the context boundaries - parentheses, brackets etc will become necessary.
+Say for instance you want brackets and backticks in a regex with chained methods:
+```
+	matches	: Boolean myString.find(``(\w+)``).print()
+	band 	: Boolean myString.findOne(``bandname`:Sun O)))`).toUppercase()
+```
+(I probably wouldn't write either like that, but it's a style.)
+The meaning is clear-ish, but it's a little non-obvious how to parse it.
+This is undoubtedly a solved problem, but it's beyond me for now, so I'm going to go with a simpler solution with unambiguous context boundaries.
+```
+	regex1	: String ``(\w+)``
+	matches	: Boolean myString.find(regex1).print()
+	regex2	: String ``bandname`:Sun O)))`
+	band 	: Boolean myString.findOne(regex2).toUppercase()
+```
+This is how I would write these - more readable to me, and easier to parse.
+And no need (yet) to escape anything.
 
 
+### Single and double quotes
+
+Does that leave anything for single and double quotes to do? Dunno...
+Single quotes could still be used for value names as I've speculated, but no need to rush that one.
+Double quotes are still free at this point.
+They prehaps could be used for strings with escape sequences, which would be funny because I would have arrived at the same place as lots of other languages, but sort of by going in reverse.
+I'd rather leave them unclaimed for now and further investigate the string-alias-typing idea.
 
 
+Summary Again
+-------------
+I'd better cut this off pretty soon, or split or move on.
+
+* The basic string type is a raw literal
+* The basic string type is delimited with backticks
+* The outermost pair of backticks in the context are the deilimiters, everything inside is the string proper
+* Context ends at the end of the line
+* Type aliases can use different constructors, as long they return the main type
+* String interpolation strongly recommended. Concatenation will not be implemented initially.
+* Plain (undelimited) value and type names have fairly strict naming rules
+* More complicated value names can be be achieved by quoting with single quotes
+* Be able to recognise and handle multiline raw strings in the lexer/parser.
+
+
+### Further notes/questions
+* Is there *any* need or use for parentheses in silver-data?
+* Is there *any* need or use for braces in silver-data?
+
+https://en.wikipedia.org/wiki/Delimiter#Delimiter_collision
