@@ -71,3 +71,19 @@ Or with braces - though note the indentation on the parent is still significant 
 			name:	`corn flakes`;
 			price:	$9.99;
 		}
+
+
+
+Types
+-----
+
+How could types work in brace syntax?
+
+name : type value
+
+
+name : type
+	sub1: type1 value1
+	sub2: type2 value2
+
+name : type { sub1: type1 value1; sub2: type2 value2; }
