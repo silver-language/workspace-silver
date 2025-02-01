@@ -1,8 +1,5 @@
-Basic syntax
-============
-
-Silver-data main features
--------------------------
+Syntax Overview
+===============
 
 
 The overall form:
