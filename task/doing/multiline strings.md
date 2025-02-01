@@ -1,14 +1,26 @@
 Multiline Strings
 =================
 
+Allow multi-line strings in Silver Data
+
+```yaml
+type: design/decision task
+category: lexing/parsing
+status:  in progress
+priority: medium-high
+```
+
+
 Ref:
 * [string types](./string%20types.md)
 * [experiment - document format](../../wiki/silver-data/example/experiment%20-%20document%20format.md)
 
+Preamble
+--------
 
 One of the interesting things to come out of the string types discussion is the desire for dedicated multiline string handling.
 
-I'd proposed to handle something like this purely as strings, which ordinary lexing/parsing would botch:
+The proposal is to handle something like the following purely as strings (which ordinary lexing/parsing would botch):
 
 ```
 textBlock : String-multiline
@@ -28,16 +40,18 @@ Lexing/Parsing
 
 For this to work it would be desirable to catch these as early as possible in the lexer so as to not waste cycles attempting to break it into language parts.
 
-Which means the lexer would need to have a rudimentary concept of types.
+Which probably means the lexer would need to have a rudimentary concept of types.
+Hmmm.
 This might be tricky, but a very basic implementation might be doable.
 
-For example if the lexer finds a String type at indent x, followed by a line with *at least* x+1 indents, then go into string block mode.
+For example if the lexer finds a String type declaration at indent x, followed by a line with *at least* x+1 indents, then go into string block mode.
 
-You'd probably want to enforce a value-end line for these, but it also *might* be possible to allow for its omission. Not sure.
+You'd probably want to enforce a value-end line for these, but it also might be possible to allow for its omission.
+Not sure yet.
 
 
-String line variants
---------------------
+Recap: String line variants
+---------------------------
 
 Allowable string lines (single):
 
@@ -118,7 +132,7 @@ theGrandOldDukeOfYork: Array
 theGrandOldDukeOfYork end
 
 ```
-I don't think this is any clearer in this example, if anything, much uglier.
+I don't think this is any clearer in this particular example, if anything, much uglier.
 But there will be cases where something like this will be required, lambdas for example.
 It also highlights that these mean different things:
 ```
