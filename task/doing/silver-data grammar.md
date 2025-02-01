@@ -1,4 +1,4 @@
-Parsing and Grammar
+Silver-Data Grammar
 ===================
 
 The parsing structure for silver data.

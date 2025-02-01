@@ -55,8 +55,8 @@ d : 3		// require space on both sides of the colon
 ```
 
 Initially I'm inclined not to take a stance on these in the lexer/parser, and just leave these these as formatting issues, though in practically all cases I prefer space after (b).
-Sapce before only (c) looks pretty weird to me.
-Space around (d) nost of the time.
+Space before only (c) looks pretty weird to me.
+Space around (d) most of the time.
 The only time I'd tend to do (b) is for block starts.
 
 ```

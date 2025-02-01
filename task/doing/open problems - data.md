@@ -5,7 +5,7 @@ Open problems - data
 type: overview-task
 category: silver-data
 status: partial progress, ongoing
-priority: normal
+priority: low
 ```
 
 

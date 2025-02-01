@@ -2,15 +2,23 @@ Doing
 =====
 
 
+High Priority
+-------------
+
+* [String Types](./string%20types.md) - default and aliased string types
+* [Multiline Strings](./multiline%20strings.md)	- strings spanning several lines
+* [Lexing Strategies](./lexing%20strategies.md) - different ways to lex silver-data
+* [Wiki Cleanup](./wiki%20cleanup.md) - ready to make public
+
+
+Low Priority
+------------
+
+* [Silver-Data Grammar](./silver-data%20grammar.md) - a formal grammar
+* [Starting or Solo Colon](./starting%20or%20solo%20colon.md.md) - colon as a placeholder
 
 
 
-Secondary tasks
----------------
-
-Wiki clean up:
-* Many left over discussion files that aren't needed anymore - some can be moved to completed or active tasks, others just deleted.
-* Move certain files between silver-data and silver language
-* Remove/update redundant sections of silver-language where homed in silver-data
-* Remove inline discussion/discovery to tasks
-* Tone down colloquial language, make a bit more neutral
+<!---
+* [](./%20.md)
+--->

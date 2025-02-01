@@ -5,7 +5,7 @@ Type expressions
 type: task
 status: in progress
 blocks: parsing
-priority: medium
+priority: low
 ```
 
 
