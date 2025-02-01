@@ -1,7 +1,7 @@
 Complaints Folder
 =================
 
-This the the complaints folder.
+This is the complaints folder.
 
 In here feel free to post:
 
