@@ -1,40 +1,27 @@
 Syntax Overview
 ===============
 
+Simple assignment:
 
-The overall form:
+```
+name: Type value
+```
 
-	name: Type value
+Array assignnment:
 
-
-Fundamental value types are array and string
-
-
-Simple assignment
-
-	myValue : SomeType foobar
-
-
-Array assignnment
-
-	myArray: SomeArrayType
-		value1
-		value2
-		...
-
-
-Array values
-
-	myArray.value1
-	myArray.value2
+```
+myArray: SomeArrayType
+	value1
+	value2
 	...
-
+```
 
 Metadata
+```
+name..value
 
-	name..value
+eg
 
-	eg
-
-	myValue..type
-	myValue..name
+myValue..type
+myValue..name
+```
