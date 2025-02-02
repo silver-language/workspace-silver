@@ -8,4 +8,4 @@ The journal folder is new in 2025, but I've moved in a bunch of old files that f
 
 The dates have been cobbled together from git history, but it was a bit of a mess as there were a few different repos that were split and merged early on, and the edit history on some of these is a bit all over the place.
 
-So the dates are rough, indicative rather than precise.
+So the early dates are rough, indicative in most cases.
