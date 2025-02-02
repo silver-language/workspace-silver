@@ -1,7 +1,7 @@
-Wiki Cleanup
-============
+General Cleanup
+===============
 
-The wiki folder is a mess.
+The wiki folder is a mess. And some other things.
 
 ```yaml
 type: task
@@ -56,13 +56,13 @@ Most of the old stuff has either been deleted, moved to done, or moved into the 
 
 But some of it doesn't quite naturally fit in as tasks.
 They're more sort of discovery/exploratory pieces, but not necesarily with a natural resolution.
-It depends a bit, and they're mostly not very high quality, but I'm wondering if some might belong to a third category, something like a journal or blog.
+It depends a bit, and they're mostly pretty poor quality, but I'm wondering if some might belong to a third category, something like a journal or blog.
 (Of those I prefer journal.)
 I've been wondering about this in other contexts too.
 
+
 A Journal
 ---------
-
 If I added a journal folder it would work something like this:
 * Journal files would have to be datestamped so they sorted naturally, and could be filed away by year or whatever
 * They could be more informal and discussion-like
@@ -72,4 +72,14 @@ If I added a journal folder it would work something like this:
 * Revisiting a journal entry or idea means opening a new journal entry with a link to the original.
 
 
-I'm going to give this a crack - even some of my current tasks would probably qualify as journal entries.
+I'm going to give this a crack - even some of my current tasks would probably be better suited as journal entries.
+
+
+Revised Process with Journals
+-----------------------------
+
+* If it has a definable endpoint/outcome open a task
+* If the aim is discovery/discussion/braindump open a journal entry
+* Work it to a satisfactory (enough) resolution
+* Journal entries may or may not produce results
+* When done summarize relevent findings in the wiki
