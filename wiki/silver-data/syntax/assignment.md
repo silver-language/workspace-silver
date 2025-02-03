@@ -1,62 +1,58 @@
 Assignment
 ==========
 
-Assignment is done with a colon, not an equals sign.
 
-https://en.wikipedia.org/wiki/Equals_sign#Usage_in_mathematics_and_computer_programming
+Simple Assignment
+-----------------
+
+Variable assignment is in the form name-colon-value:
+
+```yaml
+	variableName : `value`
+```
+
+Type declarations have the form name-colon-Type (types are capitalised):
+
+```yaml
+	variableName : String
+```
+
+Combined assignment and type declaration is name-colon-Type-value:
 
 
-
-
-
-
-Single value assignment
------------------------
-
-Here's the basic assignment of a simple value:
-
-	variableName : value
-
-Declare a variable to be of a particular type without assigning anything to it - the type is capitalised:
-
-	variableName: Type
-
-User-made or aliased types must be capitalised:
-
-	TypeName: Type
-
-A combined type-value assignment is like this:
-
-	variableName: Type value
+```yaml
+	variableName : String `value`
+```
 
 Examples:
-
-	myString : 'hello world'
+```yaml
+	myString : `hello world`
 
 	person1 : String
-	person1 : 'Alice'
+	person1 : `Alice`
 
-	person2 : String 'Bob'
-
-
-
+	person2 : String `Bob`
+```
 
 
 Block assignment
 ----------------
 
 Block assignment is as follows:
-
+```yaml
 	blockName: BlockType
 		item1: Type1 value1
 		item2: Type2 value2
-
+```
 
 Without a name only the type is specified:
 
+```yaml
 	BlockType
-		item1: type1 value1
-		item2: type2 value2
+		item1: Type1 value1
+		item2: Type2 value2
+```
+
 
 
 Block ends
@@ -64,6 +60,7 @@ Block ends
 
 Blocks may be terminated with either of these constructs:
 
+```yaml
 	blockName: blockType
 		item1: type1 value1
 		item2: type2 value2
@@ -73,18 +70,30 @@ Blocks may be terminated with either of these constructs:
 		item1: type1 value1
 		item2: type2 value2
 	end
+```
 
-Nameless blocks can only use the second form:
+Anonymous blocks can be ended either with a plain `end` or `TypeName end`:
 
+```yaml
 	BlockType
 		item1: type1 value1
 		item2: type2 value2
 	end
 
+	BlockType
+		item1: type1 value1
+		item2: type2 value2
+	BlockType end
+```
+
+
 
 
 Refs
 ----
+
+https://en.wikipedia.org/wiki/Equals_sign#Usage_in_mathematics_and_computer_programming
+
 https://developers.slashdot.org/story/23/08/07/0136228/should-a-variables-type-come-after-its-name
 
 https://go.dev/doc/faq#declarations_backwards

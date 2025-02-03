@@ -5,7 +5,7 @@ The wiki folder is a mess. And some other things.
 
 ```yaml
 type: task
-status: ongoing
+status: nearly done
 blocks: making this repo public
 priority: high
 ```
@@ -68,7 +68,7 @@ If I added a journal folder it would work something like this:
 * They could be more informal and discussion-like
 * Needn't *necessarily* be working towards some specific outcome (unlike tasks), but could certainly generate results.
 * Should probably express a brief-ish burst of thought. For example a given journal entry shouldn't be open for much more than a week or so (if even that long) before it needs to be closed.
-* Once a journal entry is closed it shouldn't get major edits, maybe just tidies for typos, egregious errors etc.
+* Once a journal entry is closed it shouldn't get major edits, maybe just tidies for typos, egregious errors, and forwarding notes to other relevent documents.
 * Revisiting a journal entry or idea means opening a new journal entry with a link to the original.
 
 
@@ -83,3 +83,12 @@ Revised Process with Journals
 * Work it to a satisfactory (enough) resolution
 * Journal entries may or may not produce results
 * When done summarize relevent findings in the wiki
+
+
+
+Wrapup
+------
+This look like it's working so far.
+Have moved a stack of junky old documents to the journal folder for posterity, a few of which I'll mine for useful ideas.
+Some old 'tasks' (that weren't really) have been moved there as well.
+The wiki is looking cleaner and I've started making it more prescriptive/normative.

@@ -55,19 +55,20 @@ Metadata
 
 Metadata fields are read with two dots:
 
+```yaml
 	thisYear..value = 2024
 	thisYear..Type	= Integer
-	thisyear..name	= thisYear
-
+	thisYear..name	= thisYear
+```
 
 Metadata is an array, so this would be equivalent
-
+```yaml
 	thisYear
 		..
 			value : 2024
 			Type
 			name
-
+```
 
 
 Anonymous values
@@ -75,14 +76,16 @@ Anonymous values
 
 Items without names or keys are anonymous values and automatically given names/indexes:
 
+```yaml
 	stooges: Person
 		`Larry`						[1]
 		`Curly`						[2]
 		`Mo`						[3]
-
+```
 
 Anonymous blocks can use types as placeholders:
 
+```yaml
 	class:
 		Student
 			name: `Alice`
@@ -90,6 +93,7 @@ Anonymous blocks can use types as placeholders:
 			name: `Bob`
 		Student
 			name: `Charlie`
+```
 
 ### Placeholder for typed anonymous blocks (experimental)
 

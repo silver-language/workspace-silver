@@ -9,13 +9,13 @@ Type Syntax
 All types begin with a capital letter:
 
 ```yaml
-name: String `Alice`
-year: Integer 2005
+	name: String `Alice`
+	year: Integer 2005
 
-grandTour: Array
-	`Giro d'Italia`
-	`Tour de France`
-	`Vuelta a España`
+	grandTour: Array
+		`Giro d'Italia`
+		`Tour de France`
+		`Vuelta a España`
 ```
 
 ### Position
