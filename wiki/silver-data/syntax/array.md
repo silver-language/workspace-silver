@@ -58,12 +58,12 @@ Array end statements are required on all but the innermost indent levels.
 
 
 Note that these all mean different things:
-```
+```yaml
 	foo end		// The array value 'foo' ends here
 	Foo End		// The compound Type declaration 'Foo' ends here
 	Foo end		// The anonymous array value of type 'Foo' ends here
 	foo End		// This has no meaning - syntax error
 
-	end			// Array value ends here, name ommitted - not recommended
-	End			// Compound Type declaration ends here, name ommitted - strongly discouraged
+	end			// Array value ends here, name ommitted - okay but use sparingly
+	End			// Compound Type declaration ends here, name ommitted - *strongly* discouraged
 ```

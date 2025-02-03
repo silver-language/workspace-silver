@@ -22,7 +22,7 @@ One of the interesting things to come out of the string types discussion is the 
 
 The proposal is to handle something like the following purely as strings (which ordinary lexing/parsing would botch):
 
-```
+```yaml
 textBlock : String-multiline
 	“Beware the Jabberwock, my son!
 	The jaws that bite, the claws that catch!
@@ -44,7 +44,7 @@ Which probably means the lexer would need to have a rudimentary concept of types
 Hmmm.
 This might be tricky, but a very basic implementation might be doable.
 
-For example if the lexer finds a String type declaration at indent x, followed by a line with *at least* x+1 indents, then go into string block mode.
+For example if the lexer finds a String type declaration at indent x, followed by a line with *at least* x+1 indents, then go into multiline string mode for all subsequent lines while indent >= x+1.
 
 You'd probably want to enforce a value-end line for these, but it also might be possible to allow for its omission.
 Not sure yet.
@@ -55,7 +55,7 @@ Recap: String line variants
 
 Allowable string lines (single):
 
-```
+```yaml
 	name1 : String						// Ordinary type declaration without value
 	name2 : String `a basic string`
 	name3 : `a string without an explicit type, either declared elsewhere, or implied`
@@ -71,15 +71,15 @@ Allowable string lines (single):
 Anonymous String blocks
 -----------------------
 
-A couple of weirder variants - these would have almost no meaning on their own (as single lines), but could definitely be usable as block starts:
-```
+A couple of weirder variants - these would have almost no meaning on their own (as single lines), but are definitely be usable as block starts:
+```yaml
 	: String
 
 	:
 ```
 
 Some quick examples to explain:
-```
+```yaml
 theGrandOldDukeOfYork: Array
 	: String
 		Oh, the grand old Duke of York,
@@ -97,7 +97,7 @@ theGrandOldDukeOfYork end
 In this example theGrandOldDukeOfYork is declared to be an Array, and two String items will be added (automatically named 0,1 or 1,2 etc) with the items representing each stanza of the song.
 
 Similarly you could do this and maintain explcit typing (typing is actually stronger here):
-```
+```yaml
 theGrandOldDukeOfYork: Array of String
 	:
 		Oh, the grand old Duke of York,
@@ -111,11 +111,12 @@ theGrandOldDukeOfYork: Array of String
 		They were neither up nor down.
 theGrandOldDukeOfYork end
 ```
+
 This, while desirable, would be *much* harder to catch in the lexer though.
 
 While I'm thinking about it, would there be any way to properly end these blocks? Elsewhere I've mooted the use of the type where nothing else is available - it would look like this:
 
-```
+```yaml
 theGrandOldDukeOfYork: Array
 	: String
 		Oh, the grand old Duke of York,
@@ -130,19 +131,86 @@ theGrandOldDukeOfYork: Array
 		They were neither up nor down.
 	String end
 theGrandOldDukeOfYork end
+```
 
-```
-I don't think this is any clearer in this particular example, if anything, much uglier.
+I don't think that is any clearer in this particular example, much uglier if anything.
 But there will be cases where something like this will be required, lambdas for example.
-It also highlights that these mean different things:
+
+A plain `end` would probably be better:
+```yaml
+theGrandOldDukeOfYork: Array
+	: String
+		Oh, the grand old Duke of York,
+		He had ten thousand men;
+		He marched them up to the top of the hill,
+		And he marched them down again.
+	end
+	: String
+		When they were up, they were up,
+		And when they were down, they were down,
+		And when they were only halfway up,
+		They were neither up nor down.
+	end
+theGrandOldDukeOfYork end
 ```
+
+It also reminds that these mean different things:
+```yaml
 	foo end		// The value 'foo' ends here
 	Foo End		// The Type declaration 'Foo' ends here
 	Foo end		// The anonymous value of type 'Foo' ends here
 	foo End		// This has no meaning - syntax error
 ```
+See also: [Silver-data - syntax - array](../../wiki/silver-data/syntax/array.md)
 
 
+Can plain `String` be used for Multiline strings?
+-------------------------------------------
 
+So far it's been something like this:
+
+```yaml
+	simpleString: String `Hello`
+
+	someProse: String-multiline
+		FIRST WITCH
+		All hail, Macbeth! Hail to thee, Thane of Glamis!
+		SECOND WITCH
+		All hail, Macbeth! Hail to thee, Thane of Cawdor!
+		THIRD WITCH
+		All hail, Macbeth, that shalt be king hereafter!
+```
+
+But is it necessary to specify `String-multiline` for these?
+Could you make just plain `String` work for multiline strings?
+
+```yaml
+	moreProse: String
+		SECOND WITCH
+		Not so happy, yet much happier.
+```
+
+Again it would depend on being able to do a bit of lookaround.
+Not sure if easy.
+The line `moreProse: String` initially looks like a type declaration, and it would be if the indent continued at the same level.
+But in this case the indent increases on the next line, which *might* be enough to suggest a multiline string follows.
+
+The upside, if this could be made to work, is it might also allow for some other string aliases such as String-escaped and String-interpolated - the latter would lead naturally to things like document markup.
+
+Eg
+```yaml
+htmlTemplate: String-interpolated
+	<!DOCTYPE html>
+	<html>
+	<head>
+		<title>${docTitle}</title>
+	</head>
+	<body>
+		<h1>${docHeading}</h1>
+		<p>${docText}</p>
+	</body>
+	</html>
+htmlTemplate end
+```
 
 

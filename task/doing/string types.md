@@ -138,7 +138,7 @@ Strings for Names
 
 Most of the above pertains to string *values* - which could hold just about anything.
 
-When it comes to string names for values and type things will get more restrictive.
+When it comes to string names for values and types things will get more restrictive.
 
 Initially value and type names will be holding to very simple strings that don't need quotes.
 
