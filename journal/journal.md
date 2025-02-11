@@ -34,6 +34,6 @@ The journal folder is new in 2025, but I've moved in a bunch of old documents th
 
 The dates have been cobbled together from git history, but it's a bit of a mess as there were a few different repos that were split and merged early on, and the edit history on some of these is a bit scattered.
 
-So the early dates are only roughly indicative in many cases.
+So the early dates are only roughly indicative in many cases, and some are really out of order.
 
 
