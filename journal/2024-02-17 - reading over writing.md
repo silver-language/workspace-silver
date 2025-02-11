@@ -31,9 +31,6 @@ Prioritise plain language
 
 Use the plainest, most widely understood terms where you can.
 
-All natural languages evolve and have time and place variations
-
-
 Some things to avoid:
 * slang
 * idioms or expressions that might not be widely understood
@@ -45,9 +42,12 @@ Some things to avoid:
 * trying to be trendy, cool, funky, cute, hip, obscure
 * jargon
 
-These are difficult to be objective with, and there are layers to this depending (again) on who the audience is, and the intended longevity of the code.
-Try to be clear to as wide an audience as possible, not just your company, region, demographic, country etc.
+Most of that ages badly.
+If you're doing something truly iconic like sending a rocket to Jupiter then maybe, otherwise normal words are sufficient.
 
+It depends a bit , and the intended longevity of the code is a factor.
+
+Try to be clear to as wide an audience as possible, not just your company, region, demographic, country etc.
 
 
 Prioritise the vertical over the horizontal
@@ -226,7 +226,7 @@ For example:
 		not
 			const
 
-
+There may be exceptions, for example 'char' might actuallly be clearer than 'character'.
 
 Prioritise readability without an ide or syntax highlighting
 ------------------------------------------------------------
@@ -242,8 +242,6 @@ You might be:
 * In space
 
 If it can be read and understood with a simple text editor, then good.
-
-
 
 
 
@@ -265,13 +263,7 @@ Prefer well established meanings in:
 	maths
 	science
 
-
-
-We're normal humans, most of that ages badly.
-If you're doing something truly iconic like sending a rocket to Jupiter then maybe, otherwise normal words are sufficient.
-
-
-
+ These are difficult to be objective with, and there are layers to this depending (again) on who the audience is.
 
 
 Whitespace & formatting
