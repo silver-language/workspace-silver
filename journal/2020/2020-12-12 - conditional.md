@@ -8,7 +8,7 @@ The classic conditionals
 	?:
 	switch/case
 
-Ideally i'd rather goo with a more general approach like pattern matching
+Ideally i'd rather go with a more general approach like pattern matching
 https://en.wikipedia.org/wiki/Conditional_(computer_programming)#Pattern_matching
 
 
@@ -37,10 +37,11 @@ Match syntax
 
 That would be fine for basic stuff, but there might be other kinds of things that would be nice that might require more syntax/metadata.
 For example:
-	a default case if nothing else matches, akin to an 'else'
-	a way to specify match all, or match first, or other kinds of things
-	anti-match: kind of like an 'else' or a 'not'
-	a way for the match to be an expression of some sort, ie not literal
+
+* a default case if nothing else matches, akin to an 'else'
+* a way to specify match all, or match first, or other kinds of things
+* anti-match: kind of like an 'else' or a 'not'
+* a way for the match to be an expression of some sort, ie not literal
 
 Metadata
 --------

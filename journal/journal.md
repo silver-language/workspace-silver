@@ -32,8 +32,9 @@ History prior to 2025
 ---------------------
 The journal folder is new in 2025, but I've moved in a bunch of old documents that felt like they belonged here for posterity (retroactive journalling).
 
-The dates have been cobbled together from git history, but it's a bit of a mess as there were a few different repos that were split and merged early on, and the edit history on some of these is a bit scattered.
+The dates have been cobbled together from git history, but it was a bit of a mess as there were a few different repos that were split and merged early on, and the edit history on some of these is a bit scattered.
 
 So the early dates are only roughly indicative in many cases, and some are really out of order.
 
+The old documents have also been converted to markdown for readability (they were originally plain text files) but I've tried to leave them substantially as they were.
 

@@ -71,13 +71,6 @@ Equality comparison - this is a boolean or truth statement
 
 
 
-
-
-
-
-
-
-
 References
-==========
+----------
 https://en.wikipedia.org/wiki/Assignment_(computer_science)#Assignment_versus_equality

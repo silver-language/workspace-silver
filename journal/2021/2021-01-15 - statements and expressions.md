@@ -19,8 +19,6 @@ https://doc.rust-lang.org/book/ch03-03-how-functions-work.html#function-bodies-c
 
 
 
-
-
 Blocks as structures, statements and expressions
 ------------------------------------------------
 

@@ -148,37 +148,37 @@ Counter Examples
 Places where subject first doesn't make much sense, or would be a bit of stretch.
 
 
-Multiple combine or add:
+### Multiple combine or add:
 
-	Say you wanted to create a collection from some elements, which for whatever reason aren't yet combined.
-	This could be an overload of an 'add' function for example.
-	The binary case is obvious:
+Say you wanted to create a collection from some elements, which for whatever reason aren't yet combined.
+This could be an overload of an 'add' function for example.
+The binary case is obvious:
 
-		a add b
+	a add b
 
-	But for combining lots of things it's a bit uglier...
+But for combining lots of things it's a bit uglier...
 
-		a add b add c add d
+	a add b add c add d
 
-	or
+or
 
-		a add {a,b,c,d}
+	a add {a,b,c,d}
 
-	Both of these arbitrarily favour one of the elements, which isn't ideal.
-	(though, it could be used to some advantage for things like precedence)
-	So you might just to give up on subject-first and do:
+Both of these arbitrarily favour one of the elements, which isn't ideal.
+(though, it could be used to some advantage for things like precedence)
+So you might just to give up on subject-first and do:
 
-		add {a,b,c,d}
+	add {a,b,c,d}
 
-	A couple of ways to put the subject back at the start - perform it as an assignment:
+A couple of ways to put the subject back at the start - perform it as an assignment:
 
-		newCollection: add {a,b,c,d}
+	newCollection: add {a,b,c,d}
 
-	Allow the subject term to be a constructed collection:
+Allow the subject term to be a constructed collection:
 
-		{a,b,c,d} add
+	{a,b,c,d} add
 
-	But both of these would need to be cleared up about what the actual parameters are - are we adding the arguments as groups of items, or as a group of items.
+But both of these would need to be cleared up about what the actual parameters are - are we adding the arguments as groups of items, or as a group of items.
 
 
 

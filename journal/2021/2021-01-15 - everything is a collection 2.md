@@ -253,11 +253,13 @@ What if I want a graph of bus stops?
 	busStopGraph: array of busStopNode
 
 Hmmm in this case a graph is also just an array - is there a collection that can't be simply expressed as an array?
+
 	stack
 	queue
 	list
 	map
 	vector
+
 If we're oo-style then the presence of methods would prevent things from being simple arrays, but otherwise, nearly everything i can think of is an array of some sort or another... hmmm.
 I'll shelve this thought for the moment.
 
@@ -272,7 +274,7 @@ Just a few other ideas i had about array syntax
 
 	excelRow:	[aa...]	of cell							// auto incrementing alpha starting at aa
 	postion: [integer]
-	struct: [alphanumeric] of any								// kind of equivalent to a standard associative array
+	struct: [alphanumeric] of any						// kind of equivalent to a standard associative array
 
 
 

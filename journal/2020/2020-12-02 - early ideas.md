@@ -57,36 +57,38 @@ separate metadata blocks
 class
 -------------------------
 
-FooClass
-	type: class
-	extend:
-	implement:
+	FooClass
+		type: class
+		extend:
+		implement:
 
 
 Function
 -------------------------
-doFoo
-	type: function
-	return: foo
-	parameter
-		blah	string
-		foo		number
+
+	doFoo
+		type: function
+		return: foo
+		parameter
+			blah	string
+			foo		number
 
 
 
 
 Function Parameters
 -------------------
-parameter
-	name
-	type		// compile time check
-	required
-	default
-	valid 		// runtime; this could actually be a function that discriminates further than type, if no suitable subtype exists
 
-
-structure
 	parameter
+		name
+		type		// compile time check
+		required
+		default
+		valid 		// runtime; this could actually be a function that discriminates further than type, if no suitable subtype exists
+
+
+	structure
+		parameter
 
 
 
@@ -99,23 +101,23 @@ A structure, be it an array, struct, object, function, parameter etc, needs to b
 There's also the problem of defining the  difference between the different kinds of subkeys.
 A structure can have arbitratry subkeys, but depending on the type of the structure, the subkeys will be interpreted differently.
 
-structureName
-	value1			// no or implied/generated key
-	value2			// no or implied/generated key
-	simpleKey:	value
-	simpleKey2: value
+	structureName
+		value1			// no or implied/generated key
+		value2			// no or implied/generated key
+		simpleKey:	value
+		simpleKey2: value
 
 
-structureWithMetadata/properties
-	metadata/properties
-		type
-		valid
-		key
-		range
-	data
-		value1
-		value2
-		key1	value
+	structureWithMetadata/properties
+		metadata/properties
+			type
+			valid
+			key
+			range
+		data
+			value1
+			value2
+			key1	value
 
 
 structureWithInlineMetadata
@@ -131,8 +133,7 @@ Another option might be:
 		data
 		...
 
-
-	But that messes up the indenting a bit
+But that messes up the indenting a bit
 
 
 Array / anonymous collection
@@ -198,7 +199,8 @@ And if you include metadata, it gets a ~bit~ weird:
 A concise metadata/typing syntax would help here.
 
 But....	then how do you have an array of *structured* items?
-1. Anonymous key, would work, doesn't look very good though
+
+Anonymous key, would work, doesn't look very good though
 
 	array
 		*
@@ -210,7 +212,7 @@ But....	then how do you have an array of *structured* items?
 			stuff
 			stuff
 
-2. Space delimited (don't really want to do this)
+Space delimited (don't really want to do this)
 
 	array
 		item stuff
@@ -229,6 +231,7 @@ I like the idea of horizontal structure, but strict vertical structure, not so m
 The delimiter effectively becomes two consecutive line ends.
 This looks okay, though has negative implications unless the array can be made explicit...
 Eg
+
 	data
 		verb
 		verb

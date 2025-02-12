@@ -3,6 +3,7 @@ Function demangling
 ===================
 
 This is something i've started to think about in
+
 	subject first
 	metadata
 
@@ -33,6 +34,7 @@ if:
 
 
 match:
+
 	match(subject,[{expression,payload}])
 
 	becomes:
@@ -61,9 +63,6 @@ You'd need a way of defining a grammar that you wanted, something like
 
 
 But there could be a hundred ways to do it - finding the right one...
-
-F
-
 
 
 
