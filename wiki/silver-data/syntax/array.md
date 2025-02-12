@@ -53,7 +53,7 @@ All but the innermost arrays **require** end statements.
 
 
 End Statements
----------
+--------------
 Array end statements are required on all but the innermost indent levels.
 
 
