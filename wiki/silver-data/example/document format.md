@@ -2,7 +2,7 @@ Document Format
 ===============
 
 
-```
+```yaml
 myDoc: Document
 	heading: H1 `This is the heading of the document`
 
@@ -32,3 +32,5 @@ myDoc: Document
 		Link `http://localhost/help`
 myDoc end
 ```
+
+
