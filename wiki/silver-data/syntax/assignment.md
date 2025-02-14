@@ -11,14 +11,13 @@ Variable assignment is in the form name-colon-value:
 	variableName : `value`
 ```
 
-Type declarations have the form name-colon-Type (types are capitalised):
+Type declarations have the form name-colon-Type (type names are capitalised):
 
 ```yaml
 	variableName : String
 ```
 
 Combined assignment and type declaration is name-colon-Type-value:
-
 
 ```yaml
 	variableName : String `value`
@@ -38,14 +37,17 @@ Examples:
 Block assignment
 ----------------
 
-Block assignment is as follows:
+### Name as block start
+
 ```yaml
 	blockName: BlockType
 		item1: Type1 value1
 		item2: Type2 value2
 ```
 
-Without a name only the type is specified:
+### Type as block start
+
+A type alone can be used as a block start, and the block is anonymous:
 
 ```yaml
 	BlockType
@@ -53,39 +55,61 @@ Without a name only the type is specified:
 		item2: Type2 value2
 ```
 
+Optionally in these cases the type may be preceeded by a colon to aid clarity:
+```yaml
+	:BlockType
+		item1: Type1 value1
+		item2: Type2 value2
+```
+
+### Implied type
+
+When the block type is implied or provided by the context the type may also be ommitted and a single colon used as the block start:
+```yaml
+	:
+		item1: Type1 value1
+		item2: Type2 value2
+```
 
 
 Block ends
 ----------
+Block ends are optional on the innermost block.
 
-Blocks may be terminated with either of these constructs:
+All deeper blocks must be terminated with either an `end` or `end [blockname]`:
 
 ```yaml
-	blockName: blockType
-		item1: type1 value1
-		item2: type2 value2
-	end blockname
-
-	blockName: blockType
-		item1: type1 value1
-		item2: type2 value2
+	blockName: BlockType
+		item1: Type1 value1
+		item2: Type2 value2
 	end
+
+	blockName: BlockType
+		item1: Type1 value1
+		item2: Type2 value2
+	end blockName
 ```
 
-Anonymous blocks can be ended either with a plain `end` or `TypeName end`:
+### Anonymous blocks
+
+Anonymous blocks can be ended with either `end` or `TypeName end`:
 
 ```yaml
 	BlockType
-		item1: type1 value1
-		item2: type2 value2
+		item1: Type1 value1
+		item2: Type2 value2
 	end
 
 	BlockType
-		item1: type1 value1
-		item2: type2 value2
+		item1: Type1 value1
+		item2: Type2 value2
 	BlockType end
-```
 
+	:
+		item1: Type1 value1
+		item2: Type2 value2
+	end
+```
 
 
 
