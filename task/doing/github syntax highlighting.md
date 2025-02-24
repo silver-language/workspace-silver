@@ -90,3 +90,41 @@ Tabs:
 	end
 ```
 
+Results
+-------
+Looks like the yaml syntax highlighter mainly has issues with tabs.
+So i've either got to find another highlighter that's okay with tabs, or just take them all off.
+I should probably be more consistent with base-indentation too.
+
+https://en.wikipedia.org/wiki/Off-side_rule#Notable_programming_languages
+
+Someones to try: Boo, Cobra, F#, Elm, gdscript, sass
+
+
+Experiments
+-----------
+
+```java
+	blockName: BlockType
+		item1: Type1 value1
+		item2: Type2 value2
+
+
+	blockName: BlockType
+		item1: Type1 value1
+		item2: Type2 value2
+	end
+```
+
+
+```java
+	blockName: BlockType
+		item1: Type1 value1
+		item2: Type2 value2
+
+
+	blockName: BlockType
+		item1: Type1 value1
+		item2: Type2 value2
+	end
+```
