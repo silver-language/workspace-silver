@@ -3,7 +3,7 @@ Symbol for silver
 
 I keeep staring at Kalzium trying to think of of cool chemistry-ish symbol for silver.
 
-No need, this unicode character will do:
+No need, this unicode character will do, plus I like it:
 
 	Character: 🜛 U+1F71B
 	Name: ALCHEMICAL SYMBOL FOR SILVER
@@ -27,3 +27,16 @@ https://codepoints.net/U+1F71B
 
 
 Sorted.
+
+
+Origins
+-------
+
+https://en.wikipedia.org/wiki/Alchemical_Symbols_(Unicode_block)
+
+Out of curiosity I started poking around and it seems like the crescent-moon symbols for silver are much more common in old alchemical texts.
+Looking through the unicode links on the wiki page above so far I've only found one reference to the 🜛 symbol.
+It got added to unicode so someone must have thought it was a good idea.
+Perhaps they wanted a symbol whose *primary* meaning was 'silver'; the quarter moons in unicode only list alchemical silver secondarily as alias.
+Not sure yet.
+
