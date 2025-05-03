@@ -10,7 +10,7 @@ Ref:
 
 Using Ideas from String Types
 -----------------------------
-From: [string types](../task/doing/string%20types.md)
+From: [string types](../task/string%20types.md)
 
 ```
 myDoc: Document

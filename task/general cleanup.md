@@ -44,7 +44,7 @@ Threshold for publication?
 * A proper wiki-like page for Silver
 * Main topics have proper landing pages
 * Specific topics have clear and concise summaries, plus examples
-* There are relevent links between pages
+* There are relevant links between pages
 
 If I can hit those, I'll consider making the repo public on GitHub.
 
@@ -55,7 +55,7 @@ I've started cleaning out the wiki, looking a bit better.
 Most of the old stuff has either been deleted, moved to done, or moved into the task/inactive folder.
 
 But some of it doesn't quite naturally fit in as tasks.
-They're more sort of discovery/exploratory pieces, but not necesarily with a natural resolution.
+They're more sort of discovery/exploratory pieces, but not necessarily with a natural resolution.
 It depends a bit, and they're mostly pretty poor quality, but I'm wondering if some might belong to a third category, something like a journal or blog.
 (Of those I prefer journal.)
 I've been wondering about this in other contexts too.
@@ -68,7 +68,7 @@ If I added a journal folder it would work something like this:
 * They could be more informal and discussion-like
 * Needn't *necessarily* be working towards some specific outcome (unlike tasks), but could certainly generate results.
 * Should probably express a brief-ish burst of thought. For example a given journal entry shouldn't be open for much more than a week or so (if even that long) before it needs to be closed.
-* Once a journal entry is closed it shouldn't get major edits, maybe just tidies for typos, egregious errors, and forwarding notes to other relevent documents.
+* Once a journal entry is closed it shouldn't get major edits, maybe just tidies for typos, egregious errors, and forwarding notes to other relevant documents.
 * Revisiting a journal entry or idea means opening a new journal entry with a link to the original.
 
 
@@ -82,7 +82,7 @@ Revised Process with Journals
 * If the aim is discovery/discussion/braindump open a journal entry
 * Work it to a satisfactory (enough) resolution
 * Journal entries may or may not produce results
-* When done summarize relevent findings in the wiki
+* When done summarize relevant findings in the wiki
 
 
 
