@@ -18,5 +18,6 @@ Note on Markdown
 ----------------
 ~~For markdown fenced code blocks I'm using `yaml` highlighting as it's the most superficially similar to silver and gives acceptable results in most cases.~~
 
-Github does *not* like my (ab)use of `yaml` so currently looking for an alternative.
+Github does *not* like my (ab)use of `yaml` so currently [looking for an alternative](<task/github syntax highlighting.md>).
+
 
