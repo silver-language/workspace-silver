@@ -1,7 +1,6 @@
-Workspace for Silver
-====================
+Workspace for Silver 🜛
+======================
 
-<div style="font-size:47pt">🜛</div>
 
 This is where all the non-coding work for Silver lives.
 
