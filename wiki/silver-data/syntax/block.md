@@ -4,7 +4,7 @@ Blocks
 
 Blocks are denoted with indentation using tabs:
 
-```yaml
+```js
 product1:
 	name:	`cat food`
 	price:	$4.99
@@ -17,7 +17,7 @@ product2:
 
 Basic blocks can optionally be terminated with `end`, or `[blockname] end`:
 
-```yaml
+```js
 product1:
 	name:	`cat food`
 	price:	$4.99
@@ -31,7 +31,7 @@ product2 end
 
 Block ends are mandatory beyond 1 level deep:
 
-```yaml
+```js
 
 shoppingCart:
 

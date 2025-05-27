@@ -11,24 +11,24 @@ Silver Data
 -----------
 
 Basic assignment syntax:
-```
+```js
 	variableName : Type value
 ```
 For example:
-```
+```js
 	name: String `Alice`
 ```
 
 
 
 Structure assignment:
-```
+```js
 structureName: StructureType
 	item1: Type1 value1
 	item2: Type2 value2
 ```
 Example:
-```
+```js
 product1: Product
 	name:	String `cat food`
 	price:	Price  4.99
@@ -47,7 +47,7 @@ Silver language is an additional layer on top of the data format.
 It allows for creating programming structures in silver data.
 
 Example (very provisional):
-```
+```js
 factorial: Function
 	type: UnsignedInteger
 	parameter:
@@ -59,3 +59,5 @@ factorial: Function
 
 factorial end
 ```
+
+

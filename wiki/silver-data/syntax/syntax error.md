@@ -9,7 +9,7 @@ Sub-structured simple values
 
 Simple values cannot have members, so for example this would be a syntax error:
 
-```yaml
+```js
 	olympics: Integer 1900
 		venue: `Paris`
 ```
@@ -19,14 +19,14 @@ Simple values cannot have members, so for example this would be a syntax error:
 
 Strings are simple values so this is a syntax error:
 
-```yaml
+```js
 	title: String `Star Wars`
 		subtitle: `Episode IV – A New Hope`
 ```
 
 If however there isn't literal on the initial line a valid multiline string is formed:
 
-```yaml
+```js
 	title: String
 		Star Wars
 		Episode IV – A New Hope
@@ -37,7 +37,7 @@ If however there isn't literal on the initial line a valid multiline string is f
 
 In arrays types can be used as placeholders for the members:
 
-```yaml
+```js
 	classroom: Array
 		Student
 			name: `Alice`

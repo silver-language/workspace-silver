@@ -8,7 +8,7 @@ Type Syntax
 
 All types begin with a capital letter:
 
-```yaml
+```js
 	name: String `Alice`
 	year: Integer 2005
 
@@ -22,12 +22,12 @@ All types begin with a capital letter:
 
 Types go to the right of the colon, before the value:
 
-```yaml
+```js
 name: String `Alice`
 ```
 
 These are INCORRECT:
-```yaml
+```js
 name String: `Alice`	// INCORRECT
 String name: `Alice`	// INCORRECT
 ```
@@ -38,7 +38,7 @@ Type definitions
 
 Types can be built out other types:
 
-```yaml
+```js
 Product: Array
 	name: String
 	price: Decimal

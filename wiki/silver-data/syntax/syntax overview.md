@@ -3,13 +3,13 @@ Syntax Overview
 
 Simple assignment:
 
-```yaml
+```js
 name: Type value
 ```
 
 Array assignnment:
 
-```yaml
+```js
 myArray: SomeArrayType
 	value1
 	value2
@@ -17,7 +17,7 @@ myArray: SomeArrayType
 ```
 
 Metadata
-```yaml
+```js
 name..value
 
 eg

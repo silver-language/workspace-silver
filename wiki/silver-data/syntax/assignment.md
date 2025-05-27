@@ -7,24 +7,24 @@ Simple Assignment
 
 Variable assignment is in the form name-colon-value:
 
-```yaml
+```js
 	variableName : `value`
 ```
 
 Type declarations have the form name-colon-Type (type names are capitalised):
 
-```yaml
+```js
 	variableName : String
 ```
 
 Combined assignment and type declaration is name-colon-Type-value:
 
-```yaml
+```js
 	variableName : String `value`
 ```
 
 Examples:
-```yaml
+```js
 	myString : `hello world`
 
 	person1 : String
@@ -39,7 +39,7 @@ Block assignment
 
 ### Name as block start
 
-```yaml
+```js
 	blockName: BlockType
 		item1: Type1 value1
 		item2: Type2 value2
@@ -49,14 +49,14 @@ Block assignment
 
 A type alone can be used as a block start, and the block is anonymous:
 
-```yaml
+```js
 	BlockType
 		item1: Type1 value1
 		item2: Type2 value2
 ```
 
 Optionally in these cases the type may be preceeded by a colon to aid clarity:
-```yaml
+```js
 	:BlockType
 		item1: Type1 value1
 		item2: Type2 value2
@@ -65,7 +65,7 @@ Optionally in these cases the type may be preceeded by a colon to aid clarity:
 ### Implied type
 
 When the block type is implied or provided by the context the type may also be ommitted and a single colon used as the block start:
-```yaml
+```js
 	:
 		item1: Type1 value1
 		item2: Type2 value2
@@ -78,7 +78,7 @@ Block ends are optional on the innermost block.
 
 All deeper blocks must be terminated with either an `end` or `end [blockname]`:
 
-```yaml
+```js
 	blockName: BlockType
 		item1: Type1 value1
 		item2: Type2 value2
@@ -94,7 +94,7 @@ All deeper blocks must be terminated with either an `end` or `end [blockname]`:
 
 Anonymous blocks can be ended with either `end` or `TypeName end`:
 
-```yaml
+```js
 	BlockType
 		item1: Type1 value1
 		item2: Type2 value2

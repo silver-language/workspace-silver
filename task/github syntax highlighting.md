@@ -210,3 +210,16 @@ end
 		item2: Type2 value2
 	end
 ```
+
+There's quite a bit of difference between what's shown in in VSCode/Codium and Github.
+Some produce nice results in one but not the other.
+
+
+Wrap it up
+----------
+I don't want to spend much more time on this.
+For now I'll stop using yaml, and just take the highlighting off or use something pretty widley available and consistent like js or python.
+As long as I get some colouration and no red indents i'm happy for now.
+
+I'll update the wiki, and maybe some of the tasks, but won't bother going back all that much, just fix things going forward.
+

@@ -2,7 +2,7 @@ Document Format
 ===============
 
 
-```yaml
+```js
 myDoc: Document
 	heading: H1 `This is the heading of the document`
 

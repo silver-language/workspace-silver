@@ -3,7 +3,7 @@ Anonymous values
 
 Items without names are anonymous and given automatically generated names/indexes:
 
-```yaml
+```js
 stooges: Person
 	`Larry`						[1]
 	`Curly`						[2]
@@ -12,7 +12,7 @@ stooges: Person
 
 Anonymous blocks can use types as placeholders:
 
-```yaml
+```js
 class:
 	Student
 		name: `Alice`
@@ -26,7 +26,7 @@ class:
 
 In cases where the type of the child items is known a single colon can be used as a placeholder.
 
-```yaml
+```js
 class: Array of Student
 	:
 		name: `Alice`

@@ -4,7 +4,7 @@ Silver-backup
 This is a try at a config for a dreamt-of backup management program.
 
 
-```yaml
+```js
 myBackup : Backup
 	description:
 		This is a config file for silver-backup
@@ -51,7 +51,7 @@ myBackup end
 Schema
 ------
 
-```yaml
+```js
 Backup : Array
 	description: String
 	logfile: PathString

@@ -7,7 +7,7 @@ Simple Arrays
 
 Array with anonymous values (indexes will be generated):
 
-```yaml
+```js
 	beatle: Array
 		`John`
 		`Paul`
@@ -16,7 +16,7 @@ Array with anonymous values (indexes will be generated):
 ```
 
 Array with numeric indexes (conventional array):
-```yaml
+```js
 	lordOfTheRings: Array
 		1 : `The Fellowship of the Ring`
 		2 : `The Two Towers`
@@ -24,7 +24,7 @@ Array with numeric indexes (conventional array):
 ```
 
 Array with named values (associative array):
-```yaml
+```js
 	dog: Array
 		name		: `Scooby Doo`
 		bestFriend: : `Shaggy`
@@ -35,7 +35,7 @@ Array with named values (associative array):
 Nested Arrays
 -------------
 
-```yaml
+```js
 	backToTheFuture: Array
 		1 : Array
 			name	: `Back To The Future`
@@ -58,7 +58,7 @@ Array end statements are required on all but the innermost indent levels.
 
 
 Note that these all mean different things:
-```yaml
+```js
 	foo end		// The array value 'foo' ends here
 	Foo End		// The compound Type declaration 'Foo' ends here
 	Foo end		// The anonymous array value of type 'Foo' ends here
