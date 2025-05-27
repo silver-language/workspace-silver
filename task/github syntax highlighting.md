@@ -6,8 +6,16 @@ However on Github a lot of the indentation is being highlighted, presumably as a
 Need to investigate, might have to take it off.
 
 
-Examples
---------
+https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-and-highlighting-code-blocks
+
+
+### In VSCode/Codium
+https://stackoverflow.com/questions/70400790/where-can-i-find-the-list-of-supported-languages-for-markdown-preview-code-fence
+https://github.com/highlightjs/highlight.js/blob/main/SUPPORTED_LANGUAGES.md
+
+
+Fenced code examples using 'yaml'
+---------------------------------
 
 ### Simple
 
@@ -90,8 +98,8 @@ Tabs:
 	end
 ```
 
-Results
--------
+**Results**
+
 Looks like the yaml syntax highlighter mainly has issues with tabs.
 So i've either got to find another highlighter that's okay with tabs, or just take them all off.
 I should probably be more consistent with base-indentation too.
@@ -101,14 +109,14 @@ https://en.wikipedia.org/wiki/Off-side_rule#Notable_programming_languages
 Someones to try: Boo, Cobra, F#, Elm, gdscript, sass
 
 
-Experiments
------------
+Experiments with other syntax highlighters
+------------------------------------------
 
-```java
-	blockName: BlockType
-		item1: Type1 value1
-		item2: Type2 value2
+https://github.com/github-linguist/linguist/blob/main/lib/linguist/languages.yml
 
+none
+```
+	name: Type `value`
 
 	blockName: BlockType
 		item1: Type1 value1
@@ -116,12 +124,86 @@ Experiments
 	end
 ```
 
-
+java
 ```java
+	name: Type `value`
+
 	blockName: BlockType
 		item1: Type1 value1
 		item2: Type2 value2
+	end
+```
 
+python
+```python
+	name: Type `value`
+
+	blockName: BlockType
+		item1: Type1 value1
+		item2: Type2 value2
+	end
+```
+
+fsharp
+```fs
+	name: Type `value`
+
+	blockName: BlockType
+		item1: Type1 value1
+		item2: Type2 value2
+	end
+```
+
+boo
+```boo
+	name: Type `value`
+
+	blockName: BlockType
+		item1: Type1 value1
+		item2: Type2 value2
+	end
+```
+
+elm
+```elm
+	name: Type `value`
+
+	blockName: BlockType
+		item1: Type1 value1
+		item2: Type2 value2
+	end
+```
+
+godot
+```godot
+	name: Type `value`
+
+	blockName: BlockType
+		item1: Type1 value1
+		item2: Type2 value2
+	end
+```
+
+js
+```js
+	name: Type `value`
+
+	blockName: BlockType
+		item1: Type1 value1
+		item2: Type2 value2
+	end
+```
+
+bash
+```bash
+name: Type `value`
+
+blockName: BlockType
+	item1: Type1 value1
+	item2: Type2 value2
+end
+
+	name: Type `value`
 
 	blockName: BlockType
 		item1: Type1 value1
